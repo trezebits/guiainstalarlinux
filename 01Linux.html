@@ -1,0 +1,862 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Como organizo mi espacio de trabajo Linux">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/guiainstalarlinux/01Linux.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Acerca de Linux - Guía para instalar Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#el-sistema-operativo-linux" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Guía para instalar Linux" class="md-header__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guía para instalar Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Acerca de Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        Indice
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://trezebits.github.io" class="md-tabs__link">
+      treZe bits
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Guía para instalar Linux" class="md-nav__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guía para instalar Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Indice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Indice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Indice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Acerca de Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01Linux.html" class="md-nav__link md-nav__link--active">
+        Acerca de Linux
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-operativos" class="md-nav__link">
+    Sistemas operativos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-kernel-y-el-shell" class="md-nav__link">
+    El kernel y el shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribuciones" class="md-nav__link">
+    Distribuciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Distribuciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slackware" class="md-nav__link">
+    Slackware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suse" class="md-nav__link">
+    SuSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-hat" class="md-nav__link">
+    Red Hat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debian" class="md-nav__link">
+    Debian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mint" class="md-nav__link">
+    Mint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arch" class="md-nav__link">
+    Arch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freebsd" class="md-nav__link">
+    FreeBSD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escogiendo-una-distribucion" class="md-nav__link">
+    Escogiendo una distribución
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Escritorios.html" class="md-nav__link">
+        Escritorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03VMware.html" class="md-nav__link">
+        Máquina virtual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04Instalar.html" class="md-nav__link">
+        Instalar sistema operativo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Carpetas.html" class="md-nav__link">
+        Carpetas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Terminal.html" class="md-nav__link">
+        Terminal de comandos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Configurar.html" class="md-nav__link">
+        Ajustes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Uso.html" class="md-nav__link">
+        El uso de Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        treZe bits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-operativos" class="md-nav__link">
+    Sistemas operativos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-kernel-y-el-shell" class="md-nav__link">
+    El kernel y el shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribuciones" class="md-nav__link">
+    Distribuciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Distribuciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slackware" class="md-nav__link">
+    Slackware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suse" class="md-nav__link">
+    SuSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-hat" class="md-nav__link">
+    Red Hat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debian" class="md-nav__link">
+    Debian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu" class="md-nav__link">
+    Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mint" class="md-nav__link">
+    Mint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arch" class="md-nav__link">
+    Arch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freebsd" class="md-nav__link">
+    FreeBSD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escogiendo-una-distribucion" class="md-nav__link">
+    Escogiendo una distribución
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="el-sistema-operativo-linux">El sistema operativo Linux<a class="headerlink" href="#el-sistema-operativo-linux" title="Permanent link">&para;</a></h1>
+<h2 id="sistemas-operativos">Sistemas operativos<a class="headerlink" href="#sistemas-operativos" title="Permanent link">&para;</a></h2>
+<p>Un sistema operativo es el conjunto de programas para resolver tareas de &ldquo;intendencia&rdquo; y realizar las operaciones más básicas en nuestro ordenador. </p>
+<p>Supongamos, por ejemplo, que estamos trabajando con un procesador de textos y en un momento determinado pulsamos en el menú <em>Archivo &gt; Guardar</em>. Para llevar a cabo esta operación hay que controlar que parte del disco está ocupada por otros archivos, si ya hay otro archivo con el mismo nombre, como están organizadas las carpetas, y un montón de cosas más. Todo este trabajo lo hace el sistema operativo, y el procesador de textos se limitará a pasarle la información a guardar. En todo momento, los programas que estamos ejecutando están comunicándose con el sistema operativo y beneficiándose de los servicios que proporciona, como es el caso de la gestión de almacenamiento en disco.</p>
+<p>Veamos otro ejemplo. Estamos navegando por Internet, seleccionamos parte del contenido de una página web y hacemos una operación de <em>copiar y pegar</em> al procesador de textos. ¿Como es posible que el navegador web y el editor de textos se pongan de acuerdo para colaborar entre ellos? Son programas independientes el uno del otro, creados por profesionales que no tienen relación entre sí. Pues bien, el sistema operativo de nuestro ordenador es quien se encarga de hacer de intermediario gracias a un programa especial llamado <em>portapapeles</em>, que se pone en marcha de forma automática al encender la máquina y se mantiene ejecutándose en segundo plano hasta que la apaguemos.</p>
+<p>En todo momento tendremos unos cuantos procesos ejecutándose en la sombra sin que seamos conscientes de ello: gestión de recursos, controladores de dispositivos, almacenamiento en discos, comunicaciones de red, e incluso algún que otro virus probablemente&hellip;</p>
+<h2 id="el-kernel-y-el-shell">El kernel y el shell<a class="headerlink" href="#el-kernel-y-el-shell" title="Permanent link">&para;</a></h2>
+<p>Para que un ordenador funcione correctamente necesitamos todo ese software instalado en el equipo (sin virus, claro). Generalmente adquirimos el aparato configurado y listo para su uso, pero podemos borrar el disco principal e instalar otro sistema operativo, lo que deja en nuestra máquina lo siguiente:</p>
+<ul>
+<li>un nuevo programa de arranque, que es lo primero que se ejecuta cuando encendemos el ordenador.</li>
+<li>un conjunto de programas básicos de gestión de recursos y procesos, conocido como el &ldquo;<em><strong>kernel</strong></em>&rdquo; o núcleo del sistema.</li>
+<li>programas para la gestión de almacenamiento en disco.</li>
+<li>programas para gestión de dispositivos, comunicaciones, etc.</li>
+<li>una colección de programas de utilidad: navegador web, explorador de ficheros, gestor de corrreo, etc.</li>
+<li>un programa que nos permita interaccionar con la máquina, llamado &ldquo;escritorio&rdquo;, también conocido como &ldquo;<em><strong>shell</strong></em>&rdquo;.</li>
+</ul>
+<p>En resumen, un sistema operativo se compone de un <em>kernel</em>, una serie de programas complementarios, y un <em>shell</em>. La palabra <em>shell</em> significa, en inglés,  <em>caparazón</em>, o <em>envoltorio</em>, y al programa utilizado para mostrar el escritorio en nuestra pantalla se le llama <em>shell</em> porque es la parte &ldquo;visible&rdquo; del sistema operativo:</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Cinnamon_4.4.8_on_Linux_Mint_19.3.png" /></p>
+<p>Hasta la década de los años ochenta del siglo pasado, el <em>shell</em> era un programa que consistía en una consola donde introducir comandos a ejecutar:</p>
+<p><br/></p>
+<p><img alt="" src="img/901pcTexto.jpg" style="width:300px;" /></p>
+<p>De esta forma, es costumbre distinguir entre <em>shells</em> de texto, al estilo antiguo, y <em>shells</em> de tipo gráfico, consistentes en un escritorio con imágenes, iconos, etc. Los sistemas operativos modernos suelen incluir ambos programas, aunque cuando encendemos el ordenador, lo que típicamente se muestra es el shell gráfico.</p>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
+<p><em>Linux</em> no es un sistema operativo, sino un <em>kernel</em>. Se trata de un proyecto iniciado en 1991 por un estudiante finlandés llamado <a href="https://es.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>, y se mantiene como desarrollo comunitario. Véase el repositorio oficial del proyecto <a href="https://www.kernel.org/">aquí</a>, o los archivos de trabajo en la plataforma <a href="https://github.com/torvalds">GitHub</a>.</p>
+<p>Para utilizarlo en nuestro ordenador tenemos que complementar este <em>kernel</em> con el resto de programas. De hecho, en la actualidad existen multitud de sistemas operativos que incorporan Linux como núcleo. <a href="https://es.wikipedia.org/wiki/Android">Android</a> o <a href="https://es.wikipedia.org/wiki/Chrome_OS">Chrome OS</a>, por ejemplo, forman parte de la lista. Y  no solo ordenadores, sino también otros dispositivos como es el caso de televisores, teléfonos, y toda clase de dispositivos inteligentes.</p>
+<p>Linux es un <em>kernel</em> inspirado en <a href="https://es.wikipedia.org/wiki/Unix">UNIX</a>, un sistema operativo ideado a finales de los años sesenta del pasado siglo, que ha llegado a convertirse en una especie de estándar en el mundo de la informática y es muy popular en las grandes instalaciones y servidores.</p>
+<p>Antes de UNIX, los sistemas operativos eran un software concebido a la medida de cada fabricante y de cada modelo de ordenador. Esta era una forma muy ineficiente de trabajar, ya que si una empresa quería sustituir sus máquinas por algún modelo más moderno y potente, se veía obligada a revisar y adaptar todos sus programas.</p>
+<p>Evidentemente se necesitaba una estandarización. A mediados de la década de 1960 el <em>Massachusetts Institute of Technology</em> (MIT) puso en marcha un proyecto para crear un sistema operativo universal. En esta iniciativa participaron los <em>Laboratorios Bell</em>, una empresa dedicada a la investigación que por aquella época era subsidiaria de la multinacional <em>AT&amp;T</em>.</p>
+<p>El proyecto fue bautizado con el nombre de <em>Multics</em> (<strong>Mult</strong>iplexed <strong>I</strong>nformation and <strong>C</strong>omputing <strong>S</strong>ervice) y pronto surgieron las primeras dificultades y desacuerdos debido a que los resultados obtenidos no iban en la línea deseada. <em>Bell Labs</em> abandonó en 1969.</p>
+<p>Era una época en la que no existían los ordenadores domésticos, y los profesionales tenían que dedicar parte de su tiempo a aprender practicando con las máquinas de la empresa. Uno de los ingenieros de <em>Bell Labs</em>, <a href="https://es.wikipedia.org/wiki/Ken_Thompson">Ken Thompson</a>, había estado desarrollando un juego llamado <em>Space Travel</em> en el ordenador utilizado en el proyecto <em>Multics</em>. Cuando intentó seguir con sus experimentos en los ordenadores de <em>Bell Labs</em>, se vió que se estaba produciendo un alto consumo de recursos, por lo que pidió que le prestaran un viejo <a href="https://es.wikipedia.org/wiki/PDP-7">DEC PDP-7</a> que estaba en desuso. Allí había que desarrollarlo todo, empezando por un sistema operativo en miniatura, y Thompson convirtió este reto en una especie de proyecto personal basado en su experiencia en el proyecto <em>Multics</em>.</p>
+<p>Poco a poco y con la ayuda de otros colegas, el nuevo sistema operativo fue evolucionando, siendo trasladado a otras máquinas más potentes para comprobar su portabilidad, y convirtiéndose finalmente en un software corporativo, bautizado inicialmente con el nombre de <em>Unics</em>, y definitivamente como <em>Unix</em>.</p>
+<p>En principio, los Laboratorios Bell no tenían la idea de comercializar el software, aunque lo patentaron y pusieron a disposición de varias universidades, lo que hizo que muchas personas empezaran a utilizarlo y se implicaran en el desarrollo de Unix. Poco a poco su uso se extendió a la empresa privada, y en 1975 AT&amp;T retiró el permiso para que Unix fuera utilizado libremente, creando una división denominada <em>Unix Systems Laboratories</em> para explotar comercialmente el software bajo el nombre de <em>Unix System V</em>. Mantuvo el negocio hasta 1993 cuando se lo vendió a <em>Novell</em>.</p>
+<p>Esta situación dió lugar a que desde la Universidad de Berkeley California surgiera un clon del sistema operativo llamado <em>Unix BSD</em> (Berkeley Software Distribution). Además de Unix System V y UNIX BSD, con el paso del tiempo aparecieron otras versiones, todas ellas basadas en el mismo estándar. IBM, por ejemplo, lanzó <em>AIX</em> en 1986. Sun Microsystems (posteriormente adquirida por Oracle) hizo lo mismo con <em>Solaris</em>, e incluso Microsoft hizo un tímido intento de comercializar un sistema operativo llamado <em>Xenix</em>, aunque con el tiempo descartó el proyecto y prefirió desarrollar <em>Windows</em>. Los ordenadores Apple, por su parte, también apostaron por Unix y en la actualidad los Mac utilizan un derivado de UNIX BSD denominado <em>Darwin</em>, y comercializado como <em>Mac OS</em>.</p>
+<p>Para luchar contra todos estos intereses comerciales, un grupo de ingenieros del MIT liderados por <a href="https://es.wikipedia.org/wiki/Richard_Stallman">Richard Stallmann</a> crearon a principios de los años ochenta la <a href="https://www.fsf.org">Free Software Foundation</a>, una organización sin ánimo de lucro cuyo propósito es promocionar la libertad en el uso del software, más allá de patentes y restricciones. Uno de los proyectos más notables de esta organización fue impulsar la creación de un sistema operativo libre. Estaba inspirado en el estándar UNIX y fue bautizado con el nombre de <em>GNU</em>, acrónimo de <em>GNU is Not Unix</em>. Su página web es <a href="https://www.gnu.org">https://www.gnu.org</a>.</p>
+<p>GNU se convirtió en un esfuerzo comunitario en el que muchos programadores aportaban sus colaboraciones. Hacia 1990 el proyecto estaba bastante avanzado, pero faltaba la pieza esencial: un kernel. En el proyecto se estaba utilizando uno llamado <em>TRIX</em>, desarrollado por el MIT, que no resultaba adecuado por estar concebido para grandes sistemas, y no tanto para ordenadores personales. Hubo algunos intentos de buscar otra alternativa que no llegaron a cuajar. Finalmente, <a href="https://es.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> creó en 1991 un kernel al que llamó &ldquo;Linux&rdquo;. </p>
+<p>Torvalds se inspiró en el libro &ldquo;<em>Operating Systems: Design and Implementation</em>&rdquo; (1987), cuyo autor, un profesor de una universidad holandesa llamado <a href="https://es.wikipedia.org/wiki/Andrew_S._Tanenbaum">Andrew Tanenbaum</a>, explicaba como construir un sistema operativo desarrollando como ejemplo una versión de UNIX en miniatura que había bautizado con el nombre de &ldquo;Minix&rdquo;.  Torvalds trabajó desde este punto de partida y concibió una versión ampliada y mejorada, que con el paso del tiempo se convirtió en un proyecto colaborativo al que han ido sumándose muchas personas.</p>
+<p>GNU adoptó <em>Linux</em> como kernel, pero Torvalds prefirió mantenerse al margen de esa comunidad, y su proyecto sigue desarrollándose como software independiente, presentando periódicamente nuevas versiones ampliadas que son utilizadas como núcleo de muchos dispositivos y sistemas operativos.</p>
+<p>Existe una controversia acerca de la denominación de Linux como sistema operativo, que los defensores de GNU prefieren denominar GNU/Linux. Véase <a href="https://es.wikipedia.org/wiki/Controversia_por_la_denominación_GNU/Linux">artículo</a> en la wikipedia.</p>
+<h2 id="distribuciones">Distribuciones<a class="headerlink" href="#distribuciones" title="Permanent link">&para;</a></h2>
+<p>Si Linux solo es un <em>kernel</em>, ¿que necesitamos para usarlo en nuestro ordenador? Recopilar el resto de programas, instalar el conjunto en nuestro equipo, y configurarlo para que todo vaya bien. O bien conseguir una recopilación realizada y distribuida por algún colectivo o empresa. </p>
+<p>GNU es un ejemplo de sistema operativo completo, pero hay otros basados en el <em>kernel</em> Linux que se distribuyen como software libre. Para conseguir cualquiera de estas &ldquo;distribuciones&rdquo; (familiarmente conocidas como &ldquo;distros&rdquo; en la jerga informática) basta con acudir a su página web, descargarla, e instalarla en nuestro ordenador.</p>
+<p>Una de las peculiaridades del <em>software libre</em> es que podemos utilizarlo a nuestro gusto, hacer copias, modificarlo y redistribuirlo. Podemos tomar una distribución ya existente, introducir algunos cambios, añadir algún programa de nuestro gusto, y de esta forma crear una nueva &ldquo;distro&rdquo; bautizada con nuestro nombre, si ese es nuestro deseo. De esta forma veremos que hay distribuciones que están basadas en otras. ¿Cuantas &ldquo;distros&rdquo; existen hoy en día? Considerando solo las de cierta relevancia, cientos. Podemos ver un ranking de popularidad en <a href="http://distrowatch.com/">http://distrowatch.com/</a>.</p>
+<p>Sin ánimo de ser exhaustivos, veamos una pequeña selección de <em>distros</em> más o menos populares.</p>
+<h3 id="slackware">Slackware<a class="headerlink" href="#slackware" title="Permanent link">&para;</a></h3>
+<p><img src="img/901slackware.png" alt="slackware" style="float:right; margin:15px;">
+Es la distribución más antigua de las que existen en activo. Fue creada en 1993, y su filosofía es lograr una réplica de UNIX, sin grandes alardes, sacrificando la vistosidad en beneficio de lograr un sistema estable y sólido. Es una <em>distro</em> popular entre administradores de servidores y grandes sistemas, aunque no deja de ser la &ldquo;abuela&rdquo;, y quizás no resulte tan atractiva como otras distribuciones más actuales.</p>
+<p>Página web: <a href="http://www.slackware.com">http://www.slackware.com</a></p>
+<h3 id="suse">SuSE<a class="headerlink" href="#suse" title="Permanent link">&para;</a></h3>
+<p><img src="img/901opensuse.png" alt="opensuse" style="float:right; margin:15px;">
+De origen alemán, comenzó siendo una versión de <em>slackware</em> con el propósito de superar esa barrera de austeridad autoimpuesta y convertirse en una recopilación de software lo más completa posible. </p>
+<p>Siendo una distribución comercial, patrocina una versión comunitaria llamada <em>openSUSE</em>.</p>
+<p>Página web de openSUSE: <a href="https://es.opensuse.org/">https://es.opensuse.org/</a></p>
+<h3 id="red-hat">Red Hat<a class="headerlink" href="#red-hat" title="Permanent link">&para;</a></h3>
+<p><img src="img/901redhat.png" alt="redhat" style="float:right; margin:15px;">
+También es una de las pioneras, habiéndose convertido con el paso del tiempo en la distribución comercial por excelencia, orientada al mundo de la empresa. Su página web es <a href="https://www.redhat.com/">https://www.redhat.com/</a>.</p>
+<p>Red Hat fue adquirida por IBM en 2018.</p>
+<p><img src="img/901fedora.png" alt="fedora" style="float:right; margin:15px;">
+De <em>Red Hat</em> se derivan otras muchas, e incluso hay una que patrocinan ellos mismos con el nombre de <em>Fedora</em>, que se mantiene como esfuerzo comunitario y sirve de campo de ensayo para las novedades que posteriormente se trasladarán a <em>RedHat</em>.</p>
+<p>Página web de Fedora: <a href="https://getfedora.org/es/">https://getfedora.org/es/</a></p>
+<p><img src="img/901centos.png" alt="centos" style="float:right; margin:15px;">
+Entre el resto de <em>distros</em> derivadas, una de las más populares es <em>CentOS</em>, cuyo objetivo es librarse de toda referencia comercial.</p>
+<p>Página web de CentOS: <a href="https://www.centos.org">https://www.centos.org</a></p>
+<h3 id="debian">Debian<a class="headerlink" href="#debian" title="Permanent link">&para;</a></h3>
+<p><img src="img/901debian.png" alt="debian" style="float:right; margin:15px;">
+Ante la proliferación de versiones comerciales, en 1993 se puso en marcha un proyecto para lograr un sistema operativo completamente ajeno a intereses de empresas, excluyendo todo software con licencias de uso restrictivas. Debian está considerada la distribución libre por excelencia y otras muchas <em>distros</em> están basadas en ella.</p>
+<p>Página web: <a href="https://www.debian.org/">https://www.debian.org/</a></p>
+<h3 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h3>
+<p><img src="img/901ubuntu.png" alt="ubuntu" style="float:right; margin:15px;">
+Es posiblemente la distribución Linux más popular. Fue creada en 2004 por una empresa llamada <em>Canonical</em>, con sede en la Isla de Man y patrocinada por el multimillonario sudafricano <a href="https://es.wikipedia.org/wiki/Mark_Shuttleworth">Mark Shuttleworth</a>. Su propósito es conseguir que todo el mundo tenga acceso a las tecnologías de la información, convirtiendo Linux en un producto con la calidad de otros sistemas operativos comerciales, fácil de usar, y extendido a otros tipos de dispositivos, televisores, teléfonos móviles, etc. </p>
+<p>Es una distribución basada en Debian. Su página web es <a href="https://www.ubuntu.com">https://www.ubuntu.com</a></p>
+<h3 id="mint">Mint<a class="headerlink" href="#mint" title="Permanent link">&para;</a></h3>
+<p><img src="img/901mint.png" alt="mint" style="float:right; margin:15px;">
+De entre las distribuciones basadas en Ubuntu, posiblemente <em>Mint</em> sea una de las más populares, por su facilidad de uso, su solidez y estabilidad, y por llevar de serie complementos que en otras distribuciones solo se incluyen opcionalmente por tener licencia <em>propietaria</em>.</p>
+<p>Página web: <a href="https://linuxmint.com">https://linuxmint.com</a></p>
+<h3 id="arch">Arch<a class="headerlink" href="#arch" title="Permanent link">&para;</a></h3>
+<p><img src="img/901arch.png" alt="arch" style="float:right; margin:15px;">
+Las primeras distribuciones eran simples recopilaciones de software destinadas a un usuario con los suficientes conocimientos técnicos como para instalar y configurar su equipo. Con el paso de los años, la mayoría de las &ldquo;distros&rdquo; han evolucionado convirtiéndose en paquetes con una calidad similar a los sistemas comerciales, acercándose al usuario medio e incorporando toda clase de mecanismos automatizados para gestionar nuestro equipo e instalar nuevo software.</p>
+<p>Arch fue creada en 2002 como respuesta a la creciente complejidad de las distribuciones, y su filosofía es presentar un entorno sencillo y orientado a usuarios avanzados que les guste &ldquo;trastear&rdquo; y configurar el sistema a mano.</p>
+<p>Página web: <a href="https://www.archlinux.org">https://www.archlinux.org</a></p>
+<h3 id="freebsd">FreeBSD<img src="img/901bsd.jpeg" alt="arch" style="float:right; margin:15px;"><a class="headerlink" href="#freebsd" title="Permanent link">&para;</a></h3>
+<p>Es una versión libre de Unix BSD. Podemos encontrarla en su página web <a href="https://www.freebsd.org">https://www.freebsd.org</a>.</p>
+<h2 id="escogiendo-una-distribucion">Escogiendo una distribución<a class="headerlink" href="#escogiendo-una-distribucion" title="Permanent link">&para;</a></h2>
+<p>En líneas generales, el principal factor a tener en cuenta es la experiencia de usuario, ya que las aplicaciones que instalemos, tales como procesador de textos, visor de fotografía, videos, navegador de internet o gestor de correo suelen ser comunes a todas las distros.</p>
+<p>Hay distribuciones más amigables y fáciles de configurar, mientras que otras están orientadas a usuarios técnicos. Algunas son comerciales y otras excluyen todo rastro de programas con licencia <em>propietaria</em> e imagen de marca. Unas son más austeras y otras más vistosas, aunque más consumidoras de recursos, como contrapartida.</p>
+<p>Podemos ver un <a href="https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions">análisis comparativo</a>. Mirándolo con detenimiento, veremos algunas cosas que las diferencian. Para empezar, cada distribución tiene su propio programa para automatizar el proceso de instalación. Suele ser un asistente que nos va guiando durante el proceso de forma cómoda, aunque algunas distribuciones, como es el caso de <em>Arch</em> o <em>Slackware</em>, se basan en un entorno bastante austero y técnico. Entre las que cuentan con instalador gráfico tenemos:</p>
+<ul>
+<li>Redhat, Fedora y derivados disponen de un programa instalador llamado <em>Anaconda</em>.</li>
+<li>Debian tiene su propio programa <em>Debian Installer</em>.</li>
+<li>Ubuntu y derivados como Mint tienen un instalador llamado <em>Ubiquity</em>.</li>
+<li>SuSE y derivados utilizan el programa YaST.</li>
+</ul>
+<p>Otra cosa que diferencia a las distribuciones es su repositorio de software. Si queremos añadir nuevos programas, basta con acudir a un servidor donde encontraremos miles de paquetes de software, escoger uno, y pulsar sobre un botón para instalarlo. Los repositorios de RedHat, Ubuntu, Debian y Suse están entre los más grandes. De todas formas, también podemos obtener programas descargándolos directamente de su página web, con lo que además obtendremos la versión más reciente. Los repositorios oficiales de las distribuciones no siempre tienen la versión más actualizada de cada cosa.</p>
+<p>Además, cada repositorio sirve los programas en un formato diferente. Algunos vienen empaquetados en un simple archivo .zip que podemos descargar y desempaquetar en nuestro disco, aunque hay otros formatos muy populares, como es el caso del formato .deb, usado por Debian, Ubuntu y Mint, por ejemplo, o el formato .rpm (redhat package manager), usado por RedHat y derivados.</p>
+<p>Para acceder a los repositorios, cada distribución tiene su programa instalador de software. Este programa visualiza el contenido del repositorio, permite descargar los ficheros y resuelve las dependencias automáticamente, instalando también el software complementario que sea necesario.</p>
+<p>Como podemos ver, las diferencias entre una <em>distro</em> y otra se basan sobre todo en los mecanismos de instalación y configuración, además del volumen de sus repositorios. Otra diferencia notable entre ellas suele ser el programa de escritorio utilizado. Torvalds solo creó un <em>kernel</em>, que tenemos que complementar con otras utilidades, entre ellas el <em>shell</em>. En el capítulo siguiente veremos varias alternativas.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introduccion" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Introduccion
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="02Escritorios.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Escritorios" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Escritorios
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

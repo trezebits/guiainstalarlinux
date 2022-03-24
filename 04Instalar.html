@@ -1,0 +1,732 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Como organizo mi espacio de trabajo Linux">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/guiainstalarlinux/04Instalar.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Instalar sistema operativo - Guía para instalar Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instalar-linux" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Guía para instalar Linux" class="md-header__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guía para instalar Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instalar sistema operativo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        Indice
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://trezebits.github.io" class="md-tabs__link">
+      treZe bits
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Guía para instalar Linux" class="md-nav__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guía para instalar Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Indice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Indice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Indice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Linux.html" class="md-nav__link">
+        Acerca de Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Escritorios.html" class="md-nav__link">
+        Escritorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03VMware.html" class="md-nav__link">
+        Máquina virtual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Instalar sistema operativo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="04Instalar.html" class="md-nav__link md-nav__link--active">
+        Instalar sistema operativo
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-menu-de-xfce" class="md-nav__link">
+    El menú de Xfce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-la-maquina-virtual" class="md-nav__link">
+    Configuración de la máquina virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizar-software" class="md-nav__link">
+    Actualizar software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucion" class="md-nav__link">
+    Resolución
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-minibarra" class="md-nav__link">
+    La minibarra
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Carpetas.html" class="md-nav__link">
+        Carpetas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Terminal.html" class="md-nav__link">
+        Terminal de comandos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Configurar.html" class="md-nav__link">
+        Ajustes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Uso.html" class="md-nav__link">
+        El uso de Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        treZe bits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-menu-de-xfce" class="md-nav__link">
+    El menú de Xfce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-la-maquina-virtual" class="md-nav__link">
+    Configuración de la máquina virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizar-software" class="md-nav__link">
+    Actualizar software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucion" class="md-nav__link">
+    Resolución
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-minibarra" class="md-nav__link">
+    La minibarra
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="instalar-linux">Instalar Linux<a class="headerlink" href="#instalar-linux" title="Permanent link">&para;</a></h1>
+<p>Una vez configurada la máquina virtual, vamos a instalar el sistema operativo en el disco duro virtual. </p>
+<h2 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
+<p>Tras iniciar una sesión <em>Live</em> desde el DVD de instalación, como vimos en el capítulo anterior, seleccionamos el idioma y pulsamos sobre el botón <em>Instalar XUbuntu</em>:</p>
+<p><img alt="" src="img/903VMware025.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Importante:</p>
+<p>Antes de empezar el proceso, debemos asegurarnos de que tenemos el ordenador conectado a la red eléctrica y a Internet. Esto último es especialmente importante, porque permitirá detectar la conexión de red y configurarla automáticamente.</p>
+</div>
+<p>Seleccionamos la disposición del teclado:</p>
+<p><img alt="" src="img/904Instalar002.png" /></p>
+<p>El uso de cierto software está limitado a licencias de uso, y no se incluye en algunas distribuciones Linux, o bien es opcional. Marcamos la casilla <em>Instalar programas de terceros</em>.</p>
+<p><img alt="" src="img/904Instalar003.png" /></p>
+<p>A continuación decidimos que vamos a hacer con el disco duro. Como se trata de un disco virtual, marcamos la opción de borrar todo el disco. De todas formas está vacío&hellip;</p>
+<p><img alt="" src="img/904Instalar004.png" /></p>
+<p>Antes de borrar el disco virtual, se nos pide confirmación:</p>
+<p><img alt="" src="img/904Instalar005.png" /></p>
+<p>Establecer nuestro huso horario:</p>
+<p><img alt="" src="img/904Instalar006.png" /></p>
+<p>A continuación introducimos un nombre de usuario, equipo y contraseña. La opción <code>Iniciar sesión automáticamente</code> hace que no se nos pida la contraseña cada vez que encendemos la máquina virtual.</p>
+<p><img alt="" src="img/904Instalar007.png" /></p>
+<p>Comienza el proceso de copiado de contenidos del DVD al disco duro y su correspondiente configuración. Es un proceso totalmente automático que puede llevar bastante tiempo. Mientras tanto, se muestra información sobre XUbuntu. Algunos componentes se descargan de Internet durante el proceso:</p>
+<p><img alt="" src="img/904Instalar008.png" /></p>
+<p>Fin de la instalación. Pulsamos sobre el botón <code>reiniciar ahora</code>.</p>
+<p><img alt="" src="img/904Instalar009.png" /></p>
+<p>Se nos pide que retiremos el DVD para reiniciar. En la configuración de la máquina virtual cambiamos la unidad de arranque y establecemos que sea el disco duro. </p>
+<p><img alt="" src="img/904Instalar010.png" /></p>
+<p>Una vez hecho esto, volvemos a la máquina virtual y pulsamos <span class="keys"><kbd class="key-enter">Enter</kbd></span> para continuar. La sesión <em>Live</em> finaliza y se reinicia la máquina, cargando esta vez el sistema operativo desde el disco duro virtual (tarda un poquito, paciencia). Finalmente se muestra el escritorio virtual en una ventana.</p>
+<p>Por algún motivo, la versión que tengo de XUbuntu muestra un mensaje indicando que falta algo de instalar:</p>
+<p><img alt="" src="img/904Instalar011.png" /></p>
+<p>Pulsamos en el botón <code>[Ejecutar esta acción]</code>. Se nos pide la contraseña del usuario que hemos creado en la máquina virtual:</p>
+<p><img alt="" src="img/904Instalar012.png" /></p>
+<h2 id="el-menu-de-xfce">El menú de Xfce<a class="headerlink" href="#el-menu-de-xfce" title="Permanent link">&para;</a></h2>
+<p>El escritorio Xfce suele mostrar una barra de aplicaciones llamada <em>Panel</em>, que en algunas distribuciones aparece en el borde inferior de la pantalla. XUbuntu lo muestra en la parte superior, aunque podemos cambiarlo de sitio o crear nuevos paneles, como veremos más adelante.</p>
+<p>En la esquina tenemos un icono con el logo de Xfce, una mascota llamada <em>whisker</em>:</p>
+<p><img alt="" src="img/whisker.jpeg" /></p>
+<p>Al pulsar en ese icono, se muestra el menú de aplicaciones:</p>
+<p><img alt="" src="img/904Instalar013.png" /></p>
+<p>El menú de aplicaciones nos da acceso a aquellas que tenemos instaladas, pero no todas están en algún apartado del menú. Tenemos dos posibles alternativas:</p>
+<ul>
+<li>
+<p>pulsar en la categoría <em>Todas las aplicaciones</em>, donde tenemos la lista completa</p>
+</li>
+<li>
+<p>teclear el nombre de la aplicación (o algo que se le parezca) en la caja de búsquedas de la parte superior del menú. Se mostrará una lista filtrada de programas que se ajustan a lo tecleado.</p>
+</li>
+</ul>
+<p>Además de usar el ratón, el menú de aplicaciones también es accesible pulsando en la tecla <code>[Super]</code>. En teclados Windows es la que tiene el símbolo de Microsoft, y en teclados Mac, la tecla <span class="keys"><kbd class="key-command">Cmd</kbd></span></p>
+<h2 id="configuracion-de-la-maquina-virtual">Configuración de la máquina virtual<a class="headerlink" href="#configuracion-de-la-maquina-virtual" title="Permanent link">&para;</a></h2>
+<p>Desplegando el menú de aplicaciones, apartado <em>Todas las aplicaciones</em>, buscamos el programa <em>Gestor de configuración</em>, que muestra una ventana con todas las posibilidades:</p>
+<p><img alt="" src="img/904Instalar017.png" /></p>
+<p>Cada opción es un pequeño programa que también es accesible por separado pulsando en el menú de aplicaciones, apartado <em>Configuración</em>, que cuenta con entradas para cada función.</p>
+<h2 id="actualizar-software">Actualizar software<a class="headerlink" href="#actualizar-software" title="Permanent link">&para;</a></h2>
+<p>Antes de hacer nada, el primer paso tras la instalación del sistema ha de ser actualizar el software instalado. Acudimos a <em>configuración &gt; actualización de software</em>:</p>
+<p><img alt="" src="img/904Instalar016.png" /></p>
+<p>Se nos pedirá la contraseña de nuestro usuario virtual. Finalizado el proceso, seguramente habrá que reiniciar la máquina virtual.</p>
+<h2 id="resolucion">Resolución<a class="headerlink" href="#resolucion" title="Permanent link">&para;</a></h2>
+<p>Si la resolución de pantalla de la máquina virtual no se ajusta automáticamente, podemos hacerlo manualmente en dos pasos:</p>
+<ul>
+<li>
+<p>en el menú de preferencias de VMWare, apartado <em>Pantalla</em>, seleccionar la opción <em>ajustar máquina virtual a la pantalla</em>. Con esto evitamos que VMWare intervenga para decidir la resolución del escritorio virtual. Hacerlo tanto para ventanas como para pantalla completa.</p>
+<p><img alt="" src="img/904Instalar014.png" /></p>
+</li>
+<li>
+<p>en la máquina virtual XUbuntu, entrar en <em>Configuración &gt; Pantalla</em> y seleccionar la resolución deseada.</p>
+<p><img alt="" src="img/904Instalar015.png" /></p>
+</li>
+</ul>
+<h2 id="la-minibarra">La minibarra<a class="headerlink" href="#la-minibarra" title="Permanent link">&para;</a></h2>
+<p>Cuando la máquina virtual ocupa toda la pantalla, dejaremos de ver el menú de <em>VMware</em>. Contamos con una funcionalidad alternativa muy interesante, la <em>minibarra</em>. Consiste en un pequeño <em>gadget</em>, que se muestra en uno de los bordes de la pantalla, y al pulsar sobre el mismo muestra un menú con opciones que habitualmente encontraremos en el menú de VMware o en su barra de herramientas. </p>
+<p>Podemos hacer cosas tales como suspender/apagar la máquina virtual, entrar en la configuración, conectar o expulsar CDs, o simular combinaciones de teclas que son capturadas por el <em>Host</em> y necesitamos pulsar en la máquina <em>Guest</em>.</p>
+<p>En la siguiente imagen vemos la minibarra en el borde superior del escritorio (al que le hemos cambiado la imagen de fondo, veremos más adelante como se hace):</p>
+<p><img alt="" src="img/904Instalar018.png" /></p>
+<p>Para activar la <em>minibarra</em>, pulsar en el menú de <em>VMware</em>, opción <em>Vista &gt; Minibarra de pantalla completa</em>.</p>
+<p>Podemos configurar la minibarra para que se muestre solo cuando acercamos el ratón, o para ubicarla en cualquiera de los cuatro bordes de la pantalla.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="03VMware.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Máquina virtual" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Máquina virtual
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="05Carpetas.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Carpetas" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Carpetas
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

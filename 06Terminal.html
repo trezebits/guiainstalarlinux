@@ -1,0 +1,1213 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Como organizo mi espacio de trabajo Linux">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/guiainstalarlinux/06Terminal.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Terminal de comandos - Guía para instalar Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#terminal-de-comandos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Guía para instalar Linux" class="md-header__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guía para instalar Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Terminal de comandos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        Indice
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://trezebits.github.io" class="md-tabs__link">
+      treZe bits
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Guía para instalar Linux" class="md-nav__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guía para instalar Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Indice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Indice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Indice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Linux.html" class="md-nav__link">
+        Acerca de Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Escritorios.html" class="md-nav__link">
+        Escritorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03VMware.html" class="md-nav__link">
+        Máquina virtual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04Instalar.html" class="md-nav__link">
+        Instalar sistema operativo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Carpetas.html" class="md-nav__link">
+        Carpetas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Terminal de comandos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="06Terminal.html" class="md-nav__link md-nav__link--active">
+        Terminal de comandos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iniciando-el-terminal" class="md-nav__link">
+    Iniciando el terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-prompt" class="md-nav__link">
+    El prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduciendo-un-comando" class="md-nav__link">
+    Introduciendo un comando
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores" class="md-nav__link">
+    Errores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-no-instalados" class="md-nav__link">
+    Comandos no instalados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argumentos" class="md-nav__link">
+    Argumentos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opciones" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borrar-pantalla" class="md-nav__link">
+    Borrar pantalla
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cerrar-sesion-interactiva" class="md-nav__link">
+    Cerrar sesión interactiva
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-del-raton" class="md-nav__link">
+    Uso del ratón
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historial-de-comandos" class="md-nav__link">
+    Historial de comandos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-directorio-de-trabajo" class="md-nav__link">
+    El directorio de trabajo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-el-contenido-de-un-directorio" class="md-nav__link">
+    Ver el contenido de un directorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-determinados-archivos" class="md-nav__link">
+    Mostrar determinados archivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cambiar-de-directorio" class="md-nav__link">
+    Cambiar de directorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abrir-carpeta-en-terminal" class="md-nav__link">
+    Abrir carpeta en Terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutar-aplicaciones-graficas" class="md-nav__link">
+    Ejecutar aplicaciones gráficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detener-un-comando" class="md-nav__link">
+    Detener un comando
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-de-administrador" class="md-nav__link">
+    Permisos de administrador
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Configurar.html" class="md-nav__link">
+        Ajustes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Uso.html" class="md-nav__link">
+        El uso de Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        treZe bits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iniciando-el-terminal" class="md-nav__link">
+    Iniciando el terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-prompt" class="md-nav__link">
+    El prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduciendo-un-comando" class="md-nav__link">
+    Introduciendo un comando
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores" class="md-nav__link">
+    Errores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-no-instalados" class="md-nav__link">
+    Comandos no instalados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argumentos" class="md-nav__link">
+    Argumentos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opciones" class="md-nav__link">
+    Opciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borrar-pantalla" class="md-nav__link">
+    Borrar pantalla
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cerrar-sesion-interactiva" class="md-nav__link">
+    Cerrar sesión interactiva
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-del-raton" class="md-nav__link">
+    Uso del ratón
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historial-de-comandos" class="md-nav__link">
+    Historial de comandos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-directorio-de-trabajo" class="md-nav__link">
+    El directorio de trabajo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-el-contenido-de-un-directorio" class="md-nav__link">
+    Ver el contenido de un directorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-determinados-archivos" class="md-nav__link">
+    Mostrar determinados archivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cambiar-de-directorio" class="md-nav__link">
+    Cambiar de directorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abrir-carpeta-en-terminal" class="md-nav__link">
+    Abrir carpeta en Terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutar-aplicaciones-graficas" class="md-nav__link">
+    Ejecutar aplicaciones gráficas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detener-un-comando" class="md-nav__link">
+    Detener un comando
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-de-administrador" class="md-nav__link">
+    Permisos de administrador
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="terminal-de-comandos">Terminal de comandos<a class="headerlink" href="#terminal-de-comandos" title="Permanent link">&para;</a></h1>
+<p>Para completar el proceso de instalación de Linux quizás necesitemos ejecutar un par de comandos del sistema operativo. Veamos una rápida introducción al <em>terminal</em>, un programa que emula las antiguas consolas de texto, cuando no había escritorios gráficos ni ratones.</p>
+<h2 id="iniciando-el-terminal">Iniciando el terminal<a class="headerlink" href="#iniciando-el-terminal" title="Permanent link">&para;</a></h2>
+<p>El terminal de comandos suele estar presente en todas las distribuciones Linux. Cada una tiene su propio programa, pero básicamente todos funcionan de forma similar. Como regla general, bastará con buscarlo en la lista de aplicaciones de nuestro escritorio. En el caso de <em>Xfce</em> lo encontraremos en el apartado <em>Accesorios &gt; Emulador de Terminal</em>:</p>
+<p><img alt="" src="img/906Terminal001.png" /></p>
+<p>Al abrirlo veremos la ventana del Terminal:</p>
+<p><img alt="" src="img/906Terminal002.png" /></p>
+<h2 id="el-prompt">El prompt<a class="headerlink" href="#el-prompt" title="Permanent link">&para;</a></h2>
+<p>Algunos terminales muestran algún mensaje de bienvenida o informativo. Seguidamente vemos una línea de texto que muestra cierta información seguida de un símbolo <code>$</code>. Suele ser algo así como</p>
+<div class="codehilite"><pre><span></span><code><span class="n">usuario</span><span class="nv">@maquina</span><span class="err">:</span><span class="n">carpeta</span><span class="w"> </span><span class="err">$</span><span class="w"></span>
+</code></pre></div>
+
+<p>A esto se le llama el <em>prompt</em>, y tras el último carácter <code>$</code>, se nos invita a teclear algún comando.</p>
+<p>En nuestro ejemplo, la carpeta está representada por el carácter <code>~</code> antes del prompt <code>$</code>. Como veremos, <code>~</code> es un alias que representa la carpeta principal del usuario.</p>
+<h2 id="introduciendo-un-comando">Introduciendo un comando<a class="headerlink" href="#introduciendo-un-comando" title="Permanent link">&para;</a></h2>
+<p>Vamos a probar a ejecutar algo. Tecleamos la palabra <code>date</code> y seguidamente la tecla <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Se muestra la fecha y hora del sistema:</p>
+<div class="highlight"><pre><span></span><code>$ date
+dom 13 mar 2022 15:34:15 CET
+</code></pre></div>
+<p>Nótese que el carácter <code>$</code> que aparece al principio del ejemplo es el <em>prompt</em>, y no es algo que tengamos que teclear. Tras completar la ejecución del comando, se recupera el <em>prompt</em>, que nos invita a introducir más comandos.</p>
+<h2 id="errores">Errores<a class="headerlink" href="#errores" title="Permanent link">&para;</a></h2>
+<p>Si tecleamos mal un comando, se mostrará un mensaje de error:</p>
+<div class="highlight"><pre><span></span><code>$ gkghj
+gkghj: orden no encontrada
+</code></pre></div>
+<p>UNIX distingue entre mayúsculas y minúsculas. Un comando, un nombre de archivo, de directorio o cualquier otra cosa donde no respetemos el uso de las letras, no será reconocido y lo más probable es que obtengamos un mensaje de error. Por ejemplo, si escribimos el comando <em>date</em> con la primera letra en mayúsculas, obtenemos:</p>
+<div class="highlight"><pre><span></span><code>$ Date
+Date: orden no encontrada
+</code></pre></div>
+<p>Algunos sistemas son suficientemente inteligentes como para sugerirnos opciones:</p>
+<div class="highlight"><pre><span></span><code>$ Date
+Orden «Date» no encontrada. Quizá quiso decir:
+  la orden «kate» del paquete snap «kate (21.12.1)»
+  la orden «gate» del paquete snap «gate (9.1)»
+  la orden «kate» del paquete deb «kate (4:21.04.2-0ubuntu1)»
+  la orden «late» del paquete deb «late (0.1.0-14)»
+  la orden «date» del paquete deb «coreutils (8.32-4ubuntu2)»
+Consulte «snap info &lt;nombre del snap&gt;» para ver más versiones.
+</code></pre></div>
+<h2 id="comandos-no-instalados">Comandos no instalados<a class="headerlink" href="#comandos-no-instalados" title="Permanent link">&para;</a></h2>
+<p>Muchos comandos son en realidad pequeños programas. Por ejemplo, <code>cal</code> es un comando que muestra el calendario del mes:</p>
+<div class="highlight"><pre><span></span><code>$ cal
+
+     Abril 2021       
+do lu ma mi ju vi sá  
+             1  2  3  
+ 4  5  6  7  8  9 10  
+11 12 13 14 15 16 17  
+18 19 20 21 22 23 24  
+25 26 27 28 29 30                
+</code></pre></div>
+<p>Es posible que en lugar de visualizar el calendario obtengamos un mensaje de error. El comando <code>cal</code> es un antiguo programa que en algunas versiones modernas de Linux no viene instalado de serie. </p>
+<p>Como veremos más adelante, hay varias formas de instalar software. Ubuntu proporciona un enorme repositorio de <em>paquetes</em> de software al que podemos acudir. El comando <code>cal</code> forma parte de un paquete llamado <code>ncal</code>. </p>
+<p>Tras asegurarnos de tener conexión a Internet, vamos a instalar <code>ncal</code> usando un comando de acceso al repositorio:</p>
+<div class="codehilite"><pre><span></span><code>$ sudo apt-get install ncal
+</code></pre></div>
+
+<p>Al pulsar <span class="keys"><kbd class="key-enter">Enter</kbd></span> se nos pedirá la contraseña de usuario para completar el proceso. Tras introducirla, pulsar <span class="keys"><kbd class="key-enter">Enter</kbd></span> de nuevo.</p>
+<p>Recuérdese que hay que respetar mayúsculas y minúsculas. El texto del comando significa:</p>
+<ul>
+<li>
+<p>la palabra <code>sudo</code> es la abreviatura de <em>super user do</em>. Significa que lo que viene a continuación es un comando especial que requiere permisos de administrador. Por ese motivo, se nos pide la contraseña.</p>
+</li>
+<li>
+<p><code>apt-get</code> es el comando para instalar nuevo software. Es un pequeño programa cuyo nombre es la abreviatura de <em>Advanced Packaging Tool</em>.</p>
+</li>
+<li>
+<p><code>install</code> es la operación a realizar. El comando <code>apt-get</code> tiene más opciones. Por ejemplo, la operación contraria a <code>install</code> es <code>remove</code>.</p>
+</li>
+<li>
+<p>finalmente se escribe el nombre del paquete a descargar e instalar, en este caso, <code>ncal</code>.</p>
+</li>
+</ul>
+<p>Una vez completada la instalación, tenemos dos nuevos comandos, <code>cal</code> y <code>ncal</code>. Lo probamos introduciendo el comando:</p>
+<div class="codehilite"><pre><span></span><code>$ ncal
+</code></pre></div>
+
+<p>El funcionamiento de <code>ncal</code> difiere ligeramente del de <code>cal</code>. Las semanas se muestran en columnas:</p>
+<div class="highlight"><pre><span></span><code>$ ncal
+
+    Abril 2021        
+lu     5 12 19 26   
+ma     6 13 20 27   
+mi     7 14 21 28   
+ju  1  8 15 22 29   
+vi  2  9 16 23 30   
+sá  3 10 17 24      
+do  4 11 18 25                 
+</code></pre></div>
+<h2 id="argumentos">Argumentos<a class="headerlink" href="#argumentos" title="Permanent link">&para;</a></h2>
+<p>Ya hemos visto que tras el comando <code>apt-get</code> añadimos más información. Todo comando puede ir acompañado de <em>argumentos</em>, que es lo que le pasamos para que pueda realizar su tarea. Por ejemplo, para ver un mes distinto del actual, al comando <code>ncal</code> le añadimos el mes y año deseado:</p>
+<div class="highlight"><pre><span></span><code>$ ncal 6 2021
+
+    Junio 2021        
+lu     7 14 21 28   
+ma  1  8 15 22 29   
+mi  2  9 16 23 30   
+ju  3 10 17 24      
+vi  4 11 18 25      
+sá  5 12 19 26      
+do  6 13 20 27    
+</code></pre></div>
+<p>Véase que los argumentos se identifican gracias a que van separados uno de otro con espacios en blanco.</p>
+<h2 id="opciones">Opciones<a class="headerlink" href="#opciones" title="Permanent link">&para;</a></h2>
+<p>Existen argumentos que permiten cambiar el comportamiento de un comando. Se llaman &ldquo;<em>opciones</em>&rdquo;, y suelen consistir en un guión y una letra. Por ejemplo, la opción <code>-C</code> (en mayúsculas) del comando <code>ncal</code> muestra la información en el mismo formato que <code>cal</code>:</p>
+<div class="highlight"><pre><span></span><code>$ ncal -C 6 2021
+
+     Junio 2021       
+do lu ma mi ju vi sá  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28 29 30       
+</code></pre></div>
+<p>Nótese que las opciones del comando se pasan como un argumento más.</p>
+<h2 id="borrar-pantalla">Borrar pantalla<a class="headerlink" href="#borrar-pantalla" title="Permanent link">&para;</a></h2>
+<p>El funcionamiento del terminal es mediante flujo de caracteres. A medida que se va llenando la ventana, el texto se irá desplazando hacia arriba para dejar espacio. Los programas de <em>Terminal</em> suelen proporcionar una barra lateral de desplazamiento que podemos arrastrar para visualizar el texto que ha quedado oculto.</p>
+<p>Si el terminal se llena de texto y queremos hacer &ldquo;limpieza&rdquo; de la ventana, podemos ejecutar el comando <code>clear</code></p>
+<h2 id="cerrar-sesion-interactiva">Cerrar sesión interactiva<a class="headerlink" href="#cerrar-sesion-interactiva" title="Permanent link">&para;</a></h2>
+<p>Para cerrar el terminal, introducir el comando <code>exit</code></p>
+<h2 id="uso-del-raton">Uso del ratón<a class="headerlink" href="#uso-del-raton" title="Permanent link">&para;</a></h2>
+<p>Las antiguas consolas de texto funcionaban solo con el teclado. Las emulaciones de terminal contemplan el uso del ratón para poder seleccionar texto y realizar operaciones de cortar y pegar, pero no podemos utilizarlo para mover el cursor. Para desplazarnos en la edición de un comando tenemos que utilizar las teclas <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> y <span class="keys"><kbd class="key-arrow-right">Right</kbd></span>.</p>
+<h2 id="historial-de-comandos">Historial de comandos<a class="headerlink" href="#historial-de-comandos" title="Permanent link">&para;</a></h2>
+<p>Siempre que ejecutamos un comando, el Terminal lo recuerda y mantiene un registro de los últimos comandos introducidos. Pulsando <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span>, podemos recuperar comandos ejecutados, navegando hacia arriba y hacia abajo en la lista, siendo el punto de partida el comando más reciente. Una vez que recuperemos el comando deseado, podemos editarlo y ejecutarlo de nuevo. Pulsar las teclas <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> y <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> para desplazarnos por el texto, modificándolo a nuestro gusto antes de ejecutarlo al pulsar <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<h2 id="el-directorio-de-trabajo">El directorio de trabajo<a class="headerlink" href="#el-directorio-de-trabajo" title="Permanent link">&para;</a></h2>
+<p>Supongamos que estamos visualizando el contenido de una carpeta en la ventana del gestor de archivos, por ejemplo, las imágenes de fondo de escritorio que se suministran con <em>Xubuntu</em>. Están en <code>/usr/share/backgrounds/xfce</code>:</p>
+<p><img alt="" src="img/906Terminal003.png" /></p>
+<p>Mientras navegamos usando el gestor de archivos, en todo momento hay una carpeta &ldquo;<em>actual</em>&rdquo; cuyo contenido se muestra. Para ir a otra carpeta, tendremos que abrirla pulsando sobre ella.</p>
+<p>En el <em>Terminal</em> pasa lo mismo. En todo momento hay una carpeta de trabajo, conocida como <em>working directory</em>. Cuando abrimos una sesión de Terminal, el directorio comenzará siendo la carpeta principal del usuario, ubicada generalmente en el directorio <code>/home/usuario</code> (cambiar &ldquo;usuario&rdquo; por el nombre que corresponda). A esta carpeta también podemos hacer referencia por su alias, formado por un único carácter <code>~</code>.</p>
+<p>Podemos ver cual es la carpeta actual en la información que se muestra en el prompt, antes del carácter <code>$</code></p>
+<div class="codehilite"><pre><span></span><code>~<span class="w"> </span><span class="p">$</span><span class="w"></span>
+</code></pre></div>
+
+<p>Otra forma de obtener esto es ejecutando el comando <code>pwd</code> (<em>print working directory</em>):</p>
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">pwd</span>
+/home/luis
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Un detalle histórico:</p>
+<p>En el mundo de los ordenadores, para
+mostrar algo en la pantalla se usa con frecuencia la palabra <em>print</em>, que significa <em>imprimir</em>. 
+Es una herencia de los tiemps prehistóricos, cuando no había pantallas y 
+todos los datos se mostraban en papel.</p>
+</div>
+<h2 id="ver-el-contenido-de-un-directorio">Ver el contenido de un directorio<a class="headerlink" href="#ver-el-contenido-de-un-directorio" title="Permanent link">&para;</a></h2>
+<p>Para mostrar una lista de los archivos que hay en un directorio, utilizar el comando <code>ls</code> (abreviatura de <em>lista</em>) 
+seguido del directorio a mostrar:</p>
+<div class="codehilite"><pre><span></span><code>$ ls /usr/share/backgrounds/xfce
+</code></pre></div>
+
+<p>con lo que veremos la lista de archvos:</p>
+<div class="codehilite"><pre><span></span><code>xfce-blue.jpg  xfce-stripes.png  xfce-teal.jpg  xfce-verticals.png
+</code></pre></div>
+
+<p>Si queremos mostrar el contenido de la carpeta actual, introducir el comando <code>ls</code> sin especificar ningún directorio:</p>
+<div class="codehilite"><pre><span></span><code>$ ls
+</code></pre></div>
+
+<p>Podemos mejorar la presentación mostrando los archivos en forma de una sola columna, añadiendo la opción <code>-1</code> como argumento. ¡Ojo! Es un número <em>uno</em>, no la letra <em>ele</em>.</p>
+<div class="codehilite"><pre><span></span><code>$ ls -1
+</code></pre></div>
+
+<p>O bien, para obtener un directorio concreto en lugar del actual:</p>
+<div class="codehilite"><pre><span></span><code>$ ls -1 /usr/share/backgrounds/xfce
+</code></pre></div>
+
+<p>Si queremos una lista detallada, usar la opción <code>-l</code> (letra <em>ele</em> minúscula). </p>
+<div class="codehilite"><pre><span></span><code>$ ls -l
+
+total <span class="m">836</span>
+-rw-r--r-- <span class="m">1</span> root root <span class="m">197011</span> dic <span class="m">23</span>  <span class="m">2020</span> xfce-blue.jpg
+-rw-r--r-- <span class="m">1</span> root root  <span class="m">48970</span> dic <span class="m">23</span>  <span class="m">2020</span> xfce-stripes.png
+-rw-r--r-- <span class="m">1</span> root root <span class="m">312080</span> dic <span class="m">23</span>  <span class="m">2020</span> xfce-teal.jpg
+-rw-r--r-- <span class="m">1</span> root root <span class="m">289725</span> dic <span class="m">23</span>  <span class="m">2020</span> xfce-verticals.png
+</code></pre></div>
+
+<p>Cada entrada de la lista es un archivo. Veamos el significado de las columnas.</p>
+<ul>
+<li>
+<p>el primer carácter <code>-</code> indica que se trata de un archivo. Un directorio mostraría una <code>d</code>, y un enlace a otro fichero mostraría una <code>l</code> (abreviatura de &ldquo;link&rdquo;)</p>
+</li>
+<li>
+<p>los tres siguientes caracteres <code>rw-</code> indican los permisos que tiene el usuario &ldquo;propietario&rdquo; de ese archivo. Puede ser <code>rwx</code>, que significa <em>read, write, execute</em>. Cuando un permiso está desactivado, se muestra un guión. Evidentemente, tratándose de un archivo <code>.jpg</code>, el permiso para ejecutarlo está desactivado, ya que no es un programa.</p>
+</li>
+<li>
+<p>los tres siguientes caracteres muestran los permisos para los usuarios que pertenezcan al grupo propietario. Todo archivo tiene un usuario y un grupo al que pertenece. En este caso, los usuarios del grupo que no sean el usuario propietario no tienen permiso <em>write</em>. Es decir, no pueden modificar ni borrar el archivo.</p>
+</li>
+<li>
+<p>los tres siguientes caracteres muestran los permisos para el resto de usuarios.</p>
+</li>
+<li>
+<p>la siguiente columna muestra el número de enlaces al fichero.</p>
+</li>
+<li>
+<p>seguidamente se muestran los nombres de usuario y grupo propietario. En el ejemplo vemos que solo podemos modificar o borrar el fichero si actuamos como usuario administrador del sistema (root).</p>
+</li>
+<li>
+<p>en la siguiente columna vemos el tamaño del archivo</p>
+</li>
+<li>
+<p>fecha de la última modificación</p>
+</li>
+<li>
+<p>nombre del archivo</p>
+</li>
+</ul>
+<p>Una opción interesante del comando <code>ls</code> es <code>-F</code> (en mayúsculas), que muestra un carácter añadido a los nombres de carpetas y archivos, indicando el tipo. Por ejemplo, las carpetas se señalan con un carácter <code>/</code>, y los programas ejecutables llevan un asterisco <code>*</code>.</p>
+<div class="highlight"><pre><span></span><code>$ ls ~ -lF
+
+total 32
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Descargas/
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Documentos/
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Escritorio/
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Imágenes/
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Música/
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Plantillas/
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Público/
+drwxr-xr-x 2 jf jf 4096 mar 11 12:05 Vídeos/
+</code></pre></div>
+<p>Véase que cuando combinamos varias opciones que estén limitadas a una letra y un guión, podemos escribirlas combinándolas en una sola, como <code>-lF</code>. A mí me gusta añadir también la opción <code>-a</code>, que muestra los archivos ocultos y las entradas correspondientes a la carpeta actual y la padre. Los archivos ocultos se distinguen porque el nombre lleva un punto como prefijo:</p>
+<div class="highlight"><pre><span></span><code>$ ls ~ -alF
+
+total 104
+drwxr-x--- 14 jf   jf   4096 mar 11 12:14 ./
+drwxr-xr-x  3 root root 4096 mar 11 11:57 ../
+-rw-------  1 jf   jf     19 mar 11 12:14 .bash_history
+-rw-r--r--  1 jf   jf    220 mar 11 11:57 .bash_logout
+-rw-r--r--  1 jf   jf   3771 mar 11 11:57 .bashrc
+drwxrwxr-x  7 jf   jf   4096 mar 11 12:05 .cache/
+drwxr-xr-x 12 jf   jf   4096 mar 11 12:13 .config/
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Descargas/
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Documentos/
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Escritorio/
+drwx------  3 jf   jf   4096 mar 11 12:05 .gnupg/
+-rw-------  1 jf   jf      0 mar 11 12:05 .ICEauthority
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Imágenes/
+drwxrwxr-x  3 jf   jf   4096 mar 11 12:05 .local/
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Música/
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Plantillas/
+-rw-r--r--  1 jf   jf    807 mar 11 11:57 .profile
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Público/
+-rw-r--r--  1 jf   jf      0 mar 11 12:13 .sudo_as_admin_successful
+drwxr-xr-x  2 jf   jf   4096 mar 11 12:05 Vídeos/
+-rw-------  1 jf   jf     47 mar 11 12:11 .Xauthority
+-rw-r--r--  1 jf   jf   1600 mar 11 11:57 .Xdefaults
+-rw-r--r--  1 jf   jf     14 mar 11 11:57 .xscreensaver
+-rw-------  1 jf   jf   6972 mar 11 12:12 .xsession-errors
+-rw-------  1 jf   jf   8881 mar 11 12:11 .xsession-errors.old
+</code></pre></div>
+<h2 id="mostrar-determinados-archivos">Mostrar determinados archivos<a class="headerlink" href="#mostrar-determinados-archivos" title="Permanent link">&para;</a></h2>
+<p>Si no queremos ver el directorio completo, podemos especificar el nombre del archivo buscado, o usar comodines:</p>
+<div class="highlight"><pre><span></span><code>ls -alF /home/luis/doc*
+</code></pre></div>
+<p>este ejemplo muestra las entradas que hay en esa carpeta, cuyo nombre empiece por <code>doc</code>.</p>
+<h2 id="cambiar-de-directorio">Cambiar de directorio<a class="headerlink" href="#cambiar-de-directorio" title="Permanent link">&para;</a></h2>
+<p>En comandos como <code>ls</code>, si no especificamos el directorio se utiliza la carpeta actual. Ya hemos visto que podemos saber cual es la carpeta de trabajo usando el comando <code>pwd</code>. Para establecer otra carpeta como tal, debemos usar el comando <code>cd</code> (<em>change directory</em>) seguido del directorio al que queremos cambiar. Por ejemplo:</p>
+<div class="codehilite"><pre><span></span><code>cd /home/luis/documentos
+</code></pre></div>
+
+<p>La ruta de carpetas indicada puede ser absoluta o relativa.</p>
+<p>Una ruta absoluta es aquella que comienza con el carácter <code>/</code> (que representa el directorio raiz). Por ejemplo, los programas del sistema suelen estar en <code>/usr/bin</code>.</p>
+<div class="highlight"><pre><span></span><code>$ cd /usr/bin
+$ pwd
+/usr/bin
+</code></pre></div>
+<p>Una ruta relativa puede ser de cuatro tipos:</p>
+<ul>
+<li>
+<p>Si comienza por <code>./carpeta</code> hace referencia a una carpeta que cuelga de la actual, representada por el punto.</p>
+</li>
+<li>
+<p>Si comienza por <code>../carpeta</code> hace referencia a una carpeta que cuelga de la carpeta padre de la actual. La carpeta padre se representa con dos puntos.</p>
+</li>
+<li>
+<p>Si comienza por <code>~/carpeta</code> hace referencia a una carpeta que cuelga de la carpeta raíz del usuario. Por ejemplo, si el usuario es <code>luis</code>, la carpeta <code>/home/luis/carpeta</code> se puede escribir como <code>~/carpeta</code></p>
+</li>
+<li>
+<p>Si la ruta comienza directamente con un nombre de carpeta, es que se trata de una que cuelga de la actual. Por ejemplo, <code>carpeta1/carpeta2</code> equivale a <code>./carpeta1/carpeta2</code>.</p>
+</li>
+</ul>
+<p>Nótese que podemos ir a una carpeta con varios comandos <code>cd</code>, paso a paso:</p>
+<div class="highlight"><pre><span></span><code>$ cd ~
+$ cd carpeta1
+$ cd carpeta2
+$ pwd
+/home/luis/carpeta1/carpeta2
+</code></pre></div>
+<p>El primer comando nos deja en la carpeta raíz del usuario. El resto van descendiendo por la estructura de carpetas del usuario.</p>
+<p>Para subir a la carpeta de la que cuelga la actual escribimos:</p>
+<div class="highlight"><pre><span></span><code>$ pwd
+/home/luis/carpeta1/carpeta2
+$ cd ..
+$ pwd
+/home/luis/carpeta1
+</code></pre></div>
+<p>No debemos olvidar que Linux es <em>case sensitive</em>. Una carpeta llamada <code>/Documentos</code> u otra <code>/documentos</code> son distintas, ya que el primer carácter difiere.</p>
+<p>También hay que tener presente que un nombre de carpeta o archivo puede llevar espacios, que actúan como separadores para identificar cada argumento del comando. Para evitarlo, podemos delimitar el texto de cada argumento entre comillas o entre apóstrofos:</p>
+<div class="highlight"><pre><span></span><code>cd &quot;/mis documentos&quot;
+</code></pre></div>
+<p>De esta forma logramos que el espacio forme parte del texto del argumento.</p>
+<h2 id="abrir-carpeta-en-terminal">Abrir carpeta en Terminal<a class="headerlink" href="#abrir-carpeta-en-terminal" title="Permanent link">&para;</a></h2>
+<p>Desde el explorador de archivos <em>Thunar</em>, podemos navegar hasta la carpeta deseada, y pulsar en el menú <em>Archivo&gt;Abrir terminal</em>, lo que abrirá una sesión de Terminal con ese directorio ya seleccionado, y nos ahorra sucesivos comandos <code>cd</code>.</p>
+<h2 id="ejecutar-aplicaciones-graficas">Ejecutar aplicaciones gráficas<a class="headerlink" href="#ejecutar-aplicaciones-graficas" title="Permanent link">&para;</a></h2>
+<p>Para ejecutar una aplicación desde el terminal de comandos, en principio basta con conocer su nombre y teclearlo. Por ejemplo, para abrir el navegador web <em>Mozilla Firefox</em> escribimos:</p>
+<div class="highlight"><pre><span></span><code>$ firefox
+</code></pre></div>
+<p>Al ejecutarse el programa, se abre en una nueva ventana. que convivirá con la del <em>Terminal</em>:</p>
+<p><img alt="" src="img/906Firefox.png" /></p>
+<p>Nótese que hasta que no finalice el programa, no recuperaremos el <em>prompt</em> en la ventana de <em>terminal</em>, y no podremos ejecutar nuevos comandos. Podemos evitar esto añadiendo un carácter <code>&amp;</code> al comando:</p>
+<div class="highlight"><pre><span></span><code>$ firefox &amp;
+</code></pre></div>
+<p>Esto hace que la ejecución sea &ldquo;en segundo plano&rdquo;, recuperando el <em>prompt</em> inmediatamente.</p>
+<p>Para que cualquier programa (gráfico o de texto) se ejecute desde la línea de comandos, es necesario que esté ubicado en alguna de las carpetas estándar para alojar programas. Esta lista de carpetas está reflejada en la variable del sistema PATH.</p>
+<p>Las variables del sistema son etiquetas asociadas a los valores de configuración del equipo. Podemos ver esos valores con el comando <code>printenv</code>. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>$ printenv PATH
+</code></pre></div>
+<p>muestra algo así como:</p>
+<div class="codehilite"><pre><span></span><code>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre></div>
+
+<p><strong>Nota</strong>: una vez más, linux es <em>case-sensitive</em>. Una variable <code>PATH</code> y otra <code>path</code> son diferentes.</p>
+<p>El valor de esta variable muestra las carpetas donde por defecto se buscarán los programas. Los elementos de la lista se separan entre ellos con dos puntos. En este ejemplo, los programas se buscarán, y por ese orden, en:</p>
+<div class="highlight"><pre><span></span><code>/usr/local/sbin
+/usr/local/bin
+/usr/sbin
+/usr/bin
+/sbin
+/bin
+</code></pre></div>
+<p><strong>¡Importante!</strong> Véase que solo podemos ejecutar programas ubicados en estas carpetas, a menos que los escribamos precedidos por el nombre de carpeta:</p>
+<div class="codehilite"><pre><span></span><code>$ ./miPrograma
+</code></pre></div>
+
+<p>Aquí estamos ejecutando un programa ubicado en la carpeta actual, representada por un punto &ldquo;.&rdquo;</p>
+<h2 id="detener-un-comando">Detener un comando<a class="headerlink" href="#detener-un-comando" title="Permanent link">&para;</a></h2>
+<p>Si ejecutamos un comando y el prompt se queda a la espera de que finalice, generalmente podemos abortar la ejecución con la pulsación de las teclas <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>, siempre que la ventana de <em>Terminal</em> sea la activa y tenga el foco del teclado.</p>
+<h2 id="permisos-de-administrador">Permisos de administrador<a class="headerlink" href="#permisos-de-administrador" title="Permanent link">&para;</a></h2>
+<p>Ya vimos, en el caso del comando <code>apt-get</code>, que para ejecutar algunos comandos necesitamos permisos de administrador. En sistemas tipo UNIX, a los usuarios &ldquo;de a pie&rdquo; no se les permite realizar operaciones de configuración del sistema, instalación de nuevas aplicaciones, etcétera. Generalmente hay un usuario con permisos especiales denominado &ldquo;root&rdquo;, o superusuario.</p>
+<p>En algunos sistemas, para conectarnos como <em>superusuario</em> tenemos que introducir el comando <code>su</code> (abreviatura de <em>superuser</em>):</p>
+<div class="codehilite"><pre><span></span><code>$ su
+</code></pre></div>
+
+<p>Se nos pide la password, y seguidamente el prompt cambia, para advertirnos que estamos en modo administrador:</p>
+<div class="codehilite"><pre><span></span><code>#
+</code></pre></div>
+
+<p>Debemos evitar el abuso de esta situación, ya que, aunque nos da más libertad, supone un peligro para el sistema. Podemos salir de la sesión de <em>superusuario</em> con el comando <code>exit</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span><span class="w"> </span><span class="nv">exit</span><span class="w"></span>
+<span class="p">$</span><span class="w"></span>
+</code></pre></div>
+
+<p>Véase que se recupera el prompt <code>$</code> indicando que estamos trabajando con permisos normales. Para cerrar la sesión de Terminal, volver a introducir el comando <code>exit</code> nuevamente. Cada comando <code>exit</code> cierra solo la sesión en curso.</p>
+<p>Algunas distribuciones linux no tienen habilitada la cuenta de superusuario. En este caso, para realizar tareas administrativas, debemos escribir todos los comandos precedidos por la palabra <code>sudo</code> (abreviatura de <em>superuser do</em>). Se nos pedirá la <em>password</em> de nuestro usuario.</p>
+<p>Por ejemplo, si escribimos:</p>
+<div class="codehilite"><pre><span></span><code>$ ls /root
+ls: no se puede abrir el directorio <span class="s1">&#39;/root&#39;</span>: Permiso denegado
+</code></pre></div>
+
+<p>es decir, no tenemos permiso para visualizar el contenido de la carpeta del administrador. Pero si escribimos:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">ls</span><span class="w"> </span><span class="o">/</span><span class="n">root</span><span class="w"></span>
+<span class="o">[</span><span class="n">sudo</span><span class="o">]</span><span class="w"> </span><span class="n">contraseña</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="nl">luis</span><span class="p">:</span><span class="w"></span>
+</code></pre></div>
+
+<p>se nos pide nuestra contraseña de usuario y seguidamente se ejecuta el comando.</p>
+<p>Si conocemos el nombre del explorador de archivos, que en el caso de Xubuntu es <em>thunar</em>, podemos abrirlo con privilegios de administrador mediante el comando:</p>
+<div class="codehilite"><pre><span></span><code>$ sudo thunar
+</code></pre></div>
+
+<p><img alt="" src="img/906Terminal004.png" /></p>
+<p>Esto nos da acceso a realizar operaciones que normalmente están restringidas, como por ejemplo, borrar archivos importantes para el sistema. Véase que se muestra un mensaje de advertencia:</p>
+<div class="codehilite"><pre><span></span><code>Está utilizando la cuenta del superusuario. Puede dañar el sistema.
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="05Carpetas.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Carpetas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Carpetas
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="07Configurar.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Ajustes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Ajustes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

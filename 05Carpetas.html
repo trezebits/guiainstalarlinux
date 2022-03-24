@@ -1,0 +1,991 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Como organizo mi espacio de trabajo Linux">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/guiainstalarlinux/05Carpetas.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Carpetas - Guía para instalar Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#carpetas-en-linux" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Guía para instalar Linux" class="md-header__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guía para instalar Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Carpetas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        Indice
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://trezebits.github.io" class="md-tabs__link">
+      treZe bits
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Guía para instalar Linux" class="md-nav__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guía para instalar Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Indice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Indice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Indice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Linux.html" class="md-nav__link">
+        Acerca de Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Escritorios.html" class="md-nav__link">
+        Escritorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03VMware.html" class="md-nav__link">
+        Máquina virtual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04Instalar.html" class="md-nav__link">
+        Instalar sistema operativo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Carpetas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="05Carpetas.html" class="md-nav__link md-nav__link--active">
+        Carpetas
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explorador-de-archivos" class="md-nav__link">
+    Explorador de archivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-ocultos" class="md-nav__link">
+    Archivos ocultos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos" class="md-nav__link">
+    Permisos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directorios" class="md-nav__link">
+    Directorios
+  </a>
+  
+    <nav class="md-nav" aria-label="Directorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directorio" class="md-nav__link">
+    Directorio /
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-home" class="md-nav__link">
+    Directorio /home
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-media" class="md-nav__link">
+    Directorio /media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-usr" class="md-nav__link">
+    Directorio /usr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-opt" class="md-nav__link">
+    Directorio /opt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-bin" class="md-nav__link">
+    Directorio /bin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-sbin" class="md-nav__link">
+    Directorio /sbin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-lib" class="md-nav__link">
+    Directorio /lib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-boot" class="md-nav__link">
+    Directorio /boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-root" class="md-nav__link">
+    Directorio /root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-etc" class="md-nav__link">
+    Directorio /etc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-dev" class="md-nav__link">
+    Directorio /dev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-proc" class="md-nav__link">
+    Directorio /proc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-sys" class="md-nav__link">
+    Directorio /sys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-tmp" class="md-nav__link">
+    Directorio /tmp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-var" class="md-nav__link">
+    Directorio /var
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Terminal.html" class="md-nav__link">
+        Terminal de comandos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Configurar.html" class="md-nav__link">
+        Ajustes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Uso.html" class="md-nav__link">
+        El uso de Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        treZe bits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explorador-de-archivos" class="md-nav__link">
+    Explorador de archivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-ocultos" class="md-nav__link">
+    Archivos ocultos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos" class="md-nav__link">
+    Permisos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directorios" class="md-nav__link">
+    Directorios
+  </a>
+  
+    <nav class="md-nav" aria-label="Directorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directorio" class="md-nav__link">
+    Directorio /
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-home" class="md-nav__link">
+    Directorio /home
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-media" class="md-nav__link">
+    Directorio /media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-usr" class="md-nav__link">
+    Directorio /usr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-opt" class="md-nav__link">
+    Directorio /opt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-bin" class="md-nav__link">
+    Directorio /bin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-sbin" class="md-nav__link">
+    Directorio /sbin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-lib" class="md-nav__link">
+    Directorio /lib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-boot" class="md-nav__link">
+    Directorio /boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-root" class="md-nav__link">
+    Directorio /root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-etc" class="md-nav__link">
+    Directorio /etc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-dev" class="md-nav__link">
+    Directorio /dev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-proc" class="md-nav__link">
+    Directorio /proc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-sys" class="md-nav__link">
+    Directorio /sys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-tmp" class="md-nav__link">
+    Directorio /tmp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-var" class="md-nav__link">
+    Directorio /var
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="carpetas-en-linux">Carpetas en Linux<a class="headerlink" href="#carpetas-en-linux" title="Permanent link">&para;</a></h1>
+<p>Una vez instalado Linux, antes de hacer nada conviene echar un vistazo al disco duro virtual, para entender como funcionan las carpetas. Si tenemos un Mac, veremos que hay cierta similitud, porque el sistema operativo de Apple, llamado <em>Darwin</em>, es un derivado de Unix BSD. Por el contrario, si venimos del mundo Windows, encontraremos bastantes diferencias.</p>
+<h2 id="explorador-de-archivos">Explorador de archivos<a class="headerlink" href="#explorador-de-archivos" title="Permanent link">&para;</a></h2>
+<p>Cada escritorio proporciona su propio programa para navegar por la estructura de carpetas. El de Xfce es un programa llamado <em>thunar</em>, que encontraremos en el menú de programas, apartado <em>accesorios &gt; gestor de archivos</em>.</p>
+<p>Tenemos un acceso alternativo en el escritorio, un icono llamado &ldquo;<em>Carpeta personal</em>&rdquo;, sobre el que podemos pulsar para abrir el explorador.</p>
+<p><img alt="" src="img/905thunar.png" /></p>
+<p>El funcionamiento es similar al que encontraremos en otros sistemas operativos, Windows, etc. En principio se muestra la carpeta principal del usuario, que puede contener archivos varios y otras carpetas como <em>Documentos</em>, <em>Música</em>, <em>Descargas</em>, <em>Escritorio</em>, etc. </p>
+<p>En la barra lateral tenemos varios enlaces. Pulsando en <em>Sistema de Archivos</em> iremos al directorio <em>raíz</em> del sistema. También veremos las carpetas compartidas con la máquina <em>Host</em>, los DVDs y otras unidades externas.</p>
+<p>Para ir a una carpeta distinta de la actual, pulsar sobre ella, sobre un enlace de la barra lateral, o bien, introducir la ruta de búsqueda en la caja de edición superior. Otra posibilidad es usar el menú <em>Ir</em>.</p>
+<p>Para crear un nuevo enlace en la barra lateral, navegar por el sistema de archivos hasta encontrar la carpeta a enlazar. Pulsar sobre ella con el botón secundario del ratón, y en el menú desplegable seleccionar <em>Enviar a &gt; Panel lateral</em>. Pulsando en <em>Enviar a escritorio</em>, creamos en el mismo un enlace a una carpeta o archivo.</p>
+<p><img alt="" src="img/905Enlace.png" /></p>
+<p>Para crear una carpeta dentro de la actual, usar el menú <em>Archivo &gt; Crear carpeta</em>. Para crear una archivo dentro de la carpeta actual, <em>Archivo &gt; Crear documento</em>.</p>
+<p>Para buscar archivos, Xfce usa una aplicación llamada <em>Catfish</em>. Se puede iniciar desde el menú de aplicaciones, o desde el explorador de archivos, menú <em>Archivo&gt;Buscar</em>.</p>
+<h2 id="archivos-ocultos">Archivos ocultos<a class="headerlink" href="#archivos-ocultos" title="Permanent link">&para;</a></h2>
+<p>En los sistemas derivados de Unix, como es el caso de Linux y Mac, para marcar un archivo como oculto tenemos que modificar su nombre, anteponiendo un prefijo consistente en un punto. Por ejemplo, <code>.miarchivo.txt</code> se considerará como oculto.</p>
+<p>En principio el explorador no muestra los elementos ocultos, salvo que activemos su visualización mediante el menú <em>Ver</em>.</p>
+<h2 id="permisos">Permisos<a class="headerlink" href="#permisos" title="Permanent link">&para;</a></h2>
+<p>Linux es un sistema operativo heredado de Unix, que a su vez fue concebido para grandes instalaciones con múltiples usuarios y grupos de usuarios compartiendo documentos. En un ordenador personal esto puede parecer algo excesivo, pero así es como funciona.</p>
+<p>Cada usuario pueden pertenecer a uno o varios grupos. Todo archivo tiene:</p>
+<ul>
+<li>un usuario propietario</li>
+<li>un grupo propietario</li>
+</ul>
+<p>A un archivo puede acceder:</p>
+<ul>
+<li>su usuario propietario</li>
+<li>otros usuarios del grupo propietario</li>
+<li>el resto de usuarios</li>
+</ul>
+<p>Y cuando accedemos a un archivo podemos hacer tres cosas:</p>
+<ul>
+<li>lectura: examinar su contenido</li>
+<li>escritura: modificarlo</li>
+<li>ejecutarlo como programa</li>
+</ul>
+<p>Combinando todo esto, tenemos nueve permisos para un mismo archivo:</p>
+<ul>
+<li>Permisos de lectura, escritura y ejecución para el usuario propietario</li>
+<li>Permisos de lectura, escritura y ejecución para el resto de usuarios del grupo propietario</li>
+<li>Permisos de lectura, escritura y ejecución para el resto de usuarios</li>
+</ul>
+<p>Para cambiar los permisos, podemos abrir el explorador de archivos, seleccionar el fichero en cuestión, y pulsar en el menú <em>Archivo &gt; Propiedades</em>. Seguidamente, pulsar en la pestaña <em>Permisos</em>:</p>
+<p><img alt="" src="img/905Permisos.png" /></p>
+<p>En el ejemplo, vemos un archivo de texto donde los permisos de ejecución están desactivados porque no se trata de un programa. El usuario propietario y los usuarios del grupo propietario pueden examinar y modificar el archivo. El resto de usuarios, solo examinarlo. Si este texto fuera un <em>script</em> con comandos a ejecutar, tendríamos que activar los permisos de ejecución correspondientes.</p>
+<h2 id="directorios">Directorios<a class="headerlink" href="#directorios" title="Permanent link">&para;</a></h2>
+<p>En Windows cada unidad de almacenamiento (disco duro, dvd, unidades USB, etc) tiene por separado su propia estructura de directorios o carpetas, mientras que en los sistemas tipo UNIX, como Mac o Linux, existe un único arbol global de directorios. Cuando hacemos referencia a un archivo, no decimos en que disco está, sino en que carpeta. Por ejemplo:</p>
+<ul>
+<li>
+<p>en windows haríamos referencia a un archivo de la siguiente forma:</p>
+<p><code>c:\nombrecarpeta\archivo.doc</code></p>
+</li>
+<li>
+<p>mientras que en sistemas tipo UNIX hacemos referencia al mismo archivo como:</p>
+<p><code>/nombrecarpeta/archivo.doc</code></p>
+</li>
+</ul>
+<p>Véase que no se menciona la unidad de disco en absoluto. El directorio raiz se representa mediante <code>/</code>, y se asocia al disco principal del sistema. Los directorios y subdirectorios que &ldquo;cuelgan&rdquo; de la carpeta raiz estarán ubicados en el mismo disco, a excepción de aquellas carpetas que asociemos explícitamente a otra unidad.</p>
+<p>Si por ejemplo asociamos la carpeta <code>/media/dvd</code> a la unidad lectora de dvd&rsquo;s, el directorio raiz del dvd se corresponderá con esa carpeta. Si en el DVD hay una carpeta <code>misarchivos</code>, que contiene un fichero llamado <code>texto.doc</code>, este será accesible mediante <code>/media/dvd/misarchivos/texto.doc</code>.</p>
+<p>Cuando asociamos una unidad externa a una carpeta, a esto se le llama &ldquo;<em>punto de montaje</em>&rdquo;.</p>
+<p>Nótese que en UNIX las carpetas se delimitan con un carácter <code>/</code>. El uso de la barra invertida <code>\</code> es propio de Windows y viene de ciertos problemas que tuvieron con el diseño de las primeras versiones del antiguo sistema operativo MS-DOS. </p>
+<div class="admonition info">
+<p class="admonition-title">Un poco de historia</p>
+<p>Lo que sucedió es que la versión original de MS-DOS estaba pensada para los primeros ordenadores personales de IBM, que no tenían disco duro. Los archivos se guardaban en diskettes extraíbles. Dada la poca capacidad de estos, no se había pensado en organizar los ficheros en carpetas.</p>
+<p>Con la versión 2.0 de MS-DOS se pensó en añadir el mecanismo de directorios, pero la barra <code>/</code> ya estaba siendo utilizada para otros propósitos. Se usaba como prefijo de los parámetros de los comandos del sistema operativo. Microsoft consideró la posibilidad de usar un punto &ldquo;.&rdquo; como separador, pero ese carácter también estaba &ldquo;pillado&rdquo;. Se usaba para separar el nombre de un archivo de su extensión. Finalmente optaron por la barra invertida &ldquo;\&ldquo;. De ahí que Windows se haya convertido en &ldquo;el rarito&rdquo;. El resto de sistemas operativos usan la barra &ldquo;/&rdquo; como separador en una ruta de directorios.</p>
+</div>
+<p>Veamos a continuación las principales carpetas de un típico sistema de la familia UNIX. La estructura completa se conoce como <code>filesystem</code>. </p>
+<div class="admonition warning">
+<p class="admonition-title">¡Cuidado!</p>
+<p>Linux es <em>case sensitive</em>. Se distingue mayúsculas de minúsculas. Un directorio o un fichero debe escribirse tal y como lo hemos creado. Por ejemplo. <code>Documentos</code> y <code>documentos</code> serían dos carpetas diferentes.</p>
+</div>
+<h3 id="directorio">Directorio /<a class="headerlink" href="#directorio" title="Permanent link">&para;</a></h3>
+<p>Toda la estructura de carpetas &ldquo;cuelga&rdquo; del directorio raíz, también llamado  <em>root</em>, representado por una barra inclinada <code>/</code>. Todos los contenidos de las diferentes unidades de almacenamiento cuelgan de aquí.</p>
+<p>El directorio <code>/</code> es el punto de montaje del disco principal del sistema.</p>
+<h3 id="directorio-home">Directorio /home<a class="headerlink" href="#directorio-home" title="Permanent link">&para;</a></h3>
+<p>Es donde los usuarios guardan sus archivos: documentos, fotos, vídeos, música, etc. También incluye la configuración personal del usuario e incluso programas a los que solo él tiene acceso.</p>
+<p>Dentro de <code>/home</code> cada usuario tiene su directorio:</p>
+<ul>
+<li>/home/julia</li>
+<li>/home/andres</li>
+<li>/home/pedro</li>
+</ul>
+<p>En nuestro día a día, esta es la carpeta con la que vamos a trabajar principalmente.</p>
+<p><strong>Nota</strong>: en los ordenadores Mac, este directorio se llama <code>/Users</code>, en lugar de <code>/home</code>.</p>
+<h3 id="directorio-media">Directorio /media<a class="headerlink" href="#directorio-media" title="Permanent link">&para;</a></h3>
+<p>Representa el punto de montaje de las unidades extraibles, USB, dvds, etc. Tradicionalmente UNIX ha utilizado para este propósito la carpeta <code>/mnt</code>, pero en las distribuciones linux actuales está muy extendido el uso de <code>/media</code>.</p>
+<p>Nosotros vamos a utilizar <code>/mnt</code> para acceder a las carpetas compartidas de la máquina física.</p>
+<h3 id="directorio-usr">Directorio /usr<a class="headerlink" href="#directorio-usr" title="Permanent link">&para;</a></h3>
+<p>El directorio /usr (<em>User System Resources</em>) se usa para ubicar las aplicaciones que instalemos. Suele tener las siguientes subcarpetas:</p>
+<ul>
+<li>/usr/bin</li>
+<li>/usr/include</li>
+<li>/usr/lib</li>
+<li>/usr/local</li>
+<li>/usr/sbin</li>
+<li>/usr/share</li>
+<li>/usr/src</li>
+</ul>
+<h3 id="directorio-opt">Directorio /opt<a class="headerlink" href="#directorio-opt" title="Permanent link">&para;</a></h3>
+<p>Es complementario a /usr, almacenando sobre todo aplicaciones externas que se distribuyen en forma de paquete.</p>
+<h3 id="directorio-bin">Directorio /bin<a class="headerlink" href="#directorio-bin" title="Permanent link">&para;</a></h3>
+<p>Es donde se almacenan los programas básicos de linux.</p>
+<h3 id="directorio-sbin">Directorio /sbin<a class="headerlink" href="#directorio-sbin" title="Permanent link">&para;</a></h3>
+<p>Similar a /bin, pero aquí tenemos los programas relativos a tareas de administración del sistema, que suelen ejecutarse solo con permisos de administrador habilitados.</p>
+<h3 id="directorio-lib">Directorio /lib<a class="headerlink" href="#directorio-lib" title="Permanent link">&para;</a></h3>
+<p>Aquí se ubican las bibliotecas necesarias para ejecutar los programas de los directorios /bin y /sbin, así como los módulos del kernel.</p>
+<p>Las bibliotecas necesarias para las aplicaciones se guardan en /usr/lib.</p>
+<div class="admonition info">
+<p class="admonition-title">Nota:</p>
+<p>Una biblioteca (<em>library</em>) es una pieza de software necesaria para complementar el contenido de los programas. Su principal utilidad es la posibilidad de que varios programas compartan las mismas bibliotecas, logrando un ahorro de recursos y un comportamiento homogéneo. </p>
+</div>
+<h3 id="directorio-boot">Directorio /boot<a class="headerlink" href="#directorio-boot" title="Permanent link">&para;</a></h3>
+<p>Es un directorio que almacena todo el software necesario para arrancar el ordenador.</p>
+<h3 id="directorio-root">Directorio /root<a class="headerlink" href="#directorio-root" title="Permanent link">&para;</a></h3>
+<p>En los sistemas UNIX podemos tener una o varias cuentas de usuario, cada una con su carpeta <code>/home/usuarioxxx</code>, y una cuenta de administrador para tareas de administración del sistema, cuya carpeta es <code>/root</code>. Generalmente conviene trabajar en el día a día solo con permisos de usuario, por motivos de seguridad. Utilizaremos la cuenta de administrador para instalar nuevo software y realizar tareas de mantenimiento y configuración.</p>
+<h3 id="directorio-etc">Directorio /etc<a class="headerlink" href="#directorio-etc" title="Permanent link">&para;</a></h3>
+<p>Aquí es donde se guardan los archivos de configuración del sistema operativo y de los programas y aplicaciones instaladas.</p>
+<h3 id="directorio-dev">Directorio /dev<a class="headerlink" href="#directorio-dev" title="Permanent link">&para;</a></h3>
+<p>Los archivos de esta carpeta son en realidad accesos de bajo nivel a los dispositivos conectados: disco duro, teclado, unidad USB, etc.</p>
+<h3 id="directorio-proc">Directorio /proc<a class="headerlink" href="#directorio-proc" title="Permanent link">&para;</a></h3>
+<p>Contiene información de los procesos y aplicaciones que se están ejecutando en el momento. Realmente no guarda información fisicamente, sino que es una forma de referirnos a los datos de esos procesos.</p>
+<h3 id="directorio-sys">Directorio /sys<a class="headerlink" href="#directorio-sys" title="Permanent link">&para;</a></h3>
+<p>Similar a /proc, pero referido a procesos del kernel.</p>
+<h3 id="directorio-tmp">Directorio /tmp<a class="headerlink" href="#directorio-tmp" title="Permanent link">&para;</a></h3>
+<p>Como indica su nombre, sirve para almacenar archivos temporales.</p>
+<h3 id="directorio-var">Directorio /var<a class="headerlink" href="#directorio-var" title="Permanent link">&para;</a></h3>
+<p>Archivos varios con información de eventos del sistema.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="04Instalar.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Instalar sistema operativo" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Instalar sistema operativo
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="06Terminal.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Terminal de comandos" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Terminal de comandos
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

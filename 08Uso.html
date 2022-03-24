@@ -1,0 +1,906 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Como organizo mi espacio de trabajo Linux">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/guiainstalarlinux/08Uso.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>El uso de Linux - Guía para instalar Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#trabajando-con-linux" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Guía para instalar Linux" class="md-header__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guía para instalar Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              El uso de Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        Indice
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://trezebits.github.io" class="md-tabs__link">
+      treZe bits
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Guía para instalar Linux" class="md-nav__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guía para instalar Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Indice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Indice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Indice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Linux.html" class="md-nav__link">
+        Acerca de Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Escritorios.html" class="md-nav__link">
+        Escritorios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03VMware.html" class="md-nav__link">
+        Máquina virtual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04Instalar.html" class="md-nav__link">
+        Instalar sistema operativo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Carpetas.html" class="md-nav__link">
+        Carpetas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Terminal.html" class="md-nav__link">
+        Terminal de comandos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Configurar.html" class="md-nav__link">
+        Ajustes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          El uso de Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="08Uso.html" class="md-nav__link md-nav__link--active">
+        El uso de Linux
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-manual-de-xfce" class="md-nav__link">
+    El manual de Xfce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#favoritos" class="md-nav__link">
+    Favoritos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturas-de-pantalla" class="md-nav__link">
+    Capturas de pantalla
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atajos-de-teclado" class="md-nav__link">
+    Atajos de teclado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    Aplicaciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#libre-office" class="md-nav__link">
+    Libre Office
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegador-web" class="md-nav__link">
+    Navegador web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correo-electronico" class="md-nav__link">
+    Correo electrónico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visor-de-documentos" class="md-nav__link">
+    Visor de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escaner-de-documentos" class="md-nav__link">
+    Escáner de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photoshop" class="md-nav__link">
+    Photoshop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproductores-de-musica-y-video" class="md-nav__link">
+    Reproductores de música y vídeo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grabador-de-cds-y-dvds" class="md-nav__link">
+    Grabador de CDs y DVDs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilidades-varias" class="md-nav__link">
+    Utilidades varias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-a-instalar" class="md-nav__link">
+    Software a instalar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-del-sistema" class="md-nav__link">
+    Información del sistema
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        treZe bits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-manual-de-xfce" class="md-nav__link">
+    El manual de Xfce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#favoritos" class="md-nav__link">
+    Favoritos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturas-de-pantalla" class="md-nav__link">
+    Capturas de pantalla
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atajos-de-teclado" class="md-nav__link">
+    Atajos de teclado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    Aplicaciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#libre-office" class="md-nav__link">
+    Libre Office
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegador-web" class="md-nav__link">
+    Navegador web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correo-electronico" class="md-nav__link">
+    Correo electrónico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visor-de-documentos" class="md-nav__link">
+    Visor de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escaner-de-documentos" class="md-nav__link">
+    Escáner de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photoshop" class="md-nav__link">
+    Photoshop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproductores-de-musica-y-video" class="md-nav__link">
+    Reproductores de música y vídeo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grabador-de-cds-y-dvds" class="md-nav__link">
+    Grabador de CDs y DVDs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilidades-varias" class="md-nav__link">
+    Utilidades varias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-a-instalar" class="md-nav__link">
+    Software a instalar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-del-sistema" class="md-nav__link">
+    Información del sistema
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="trabajando-con-linux">Trabajando con Linux<a class="headerlink" href="#trabajando-con-linux" title="Permanent link">&para;</a></h1>
+<p>Una vez instalada y operativa la máquina virtual, vamos a mencionar algunas de las cosas que podemos hacer con ella.</p>
+<h2 id="el-manual-de-xfce">El manual de Xfce<a class="headerlink" href="#el-manual-de-xfce" title="Permanent link">&para;</a></h2>
+<p>El aprendizaje de Linux pasa por tres etapas:</p>
+<ul>
+<li>entender como funciona el escritorio</li>
+<li>aprender los comandos de linux y sus interioridades</li>
+<li>explorar el funcionamiento de nuestras aplicaciones favoritas</li>
+</ul>
+<p>En cuanto a las aplicaciones, tendremos que acudir al manual de cada una de ellas. Los comandos de linux son herencia del sistema operativo UNIX, y en la web podemos encontrar multitud de manuales.</p>
+<p>En lo que se refiere al manejo del escritorio, tendremos que mirarnos el manual de xfce (o el del escritorio seleccionado), lo que nos permitirá aprender a configurarlo, las utilidades que incluye, y como sacarle el máximo provecho. Ubuntu proporciona un manual en su <a href="https://docs.xubuntu.org">página web</a>.</p>
+<p>También podemos acudir a la <a href="https://www.xfce.org/?lang=es">página web del proyecto Xfce</a>. La documentación está <a href="https://docs.xfce.org">aquí</a>.</p>
+<h2 id="favoritos">Favoritos<a class="headerlink" href="#favoritos" title="Permanent link">&para;</a></h2>
+<p>En el menú de aplicaciones, dentro de la categoría &ldquo;<em>favoritos</em>&rdquo;, podemos añadir y quitar aplicaciones. Para ello, seleccionar una aplicación del menú, y con el botón secundario del ratón mostramos el menú emergente y pulsamos en <em>añadir a favoritos</em>.</p>
+<p><img alt="" src="img/908Uso001.png" /></p>
+<p>Si ya está en esa categoría, se mostrará la opción contraria, <em>eliminar de favoritos</em>.</p>
+<h2 id="capturas-de-pantalla">Capturas de pantalla<a class="headerlink" href="#capturas-de-pantalla" title="Permanent link">&para;</a></h2>
+<p>Como me gusta explorar las aplicaciones instaladas y tomar notas, suelo guardar &ldquo;pantallazos&rdquo; del escritorio linux o de alguna ventana. Para ello tenemos una aplicación en <em>Accesorios &gt; Captura de pantalla</em> que permite:</p>
+<ul>
+<li>capturar todo el escritorio virtual</li>
+<li>capturar solo la ventana activa</li>
+<li>podamos capturar una región del escritorio</li>
+</ul>
+<p>Las imágenes tomadas se pueden guardar en alguna carpeta de la máquina virtual, o bien en la compartida con la máquina física, o bien copiar al portapapeles.</p>
+<h2 id="atajos-de-teclado">Atajos de teclado<a class="headerlink" href="#atajos-de-teclado" title="Permanent link">&para;</a></h2>
+<p>Podemos configurar las combinaciones de teclas para realizar tareas varias. Por ejemplo, por defecto tenemos:</p>
+<ul>
+<li>para desplegar el menú de aplicaciones se usa la tecla <code>super</code> (en mac, <code>command</code>)</li>
+<li>para abrir el archivador de archivos, <code>super+E</code></li>
+<li>la emulación de terminal se abre con <code>ctrl+alt+T</code>.</li>
+<li>para minimizar todas las ventanas y mostrar el escritorio se usa <code>super+D</code>. </li>
+<li>podemos hacer un recorrido por las aplicaciones en ejecución con <code>alt+tab</code></li>
+<li>podemos introducir un comando con <code>alt+F2</code></li>
+<li>las ventanas se cierran con <code>alt+F4</code></li>
+</ul>
+<p>Para revisar estas configuraciones, ir al <em>menú de aplicaciones &gt; Configuración &gt; Teclado &gt; Atajos de las aplicaciones</em>.</p>
+<h2 id="aplicaciones">Aplicaciones<a class="headerlink" href="#aplicaciones" title="Permanent link">&para;</a></h2>
+<p>Echemos un rápido vistazo a algunas aplicaciones que vienen instaladas por defecto con <em>Xubuntu</em>.</p>
+<h3 id="libre-office">Libre Office<a class="headerlink" href="#libre-office" title="Permanent link">&para;</a></h3>
+<p><em>Libre Office</em> es una completa solución de oficina que proporciona editor de textos, hoja de cálculo, presentaciones, etc. Es más o menos compatible con <em>Microsoft Office</em>. Véase <a href="https://es.libreoffice.org">https://es.libreoffice.org</a> para más información. </p>
+<p>Tenemos documentación en <a href="https://documentation.libreoffice.org/es/documentacion-en-espanol/">https://documentation.libreoffice.org/es/documentacion-en-espanol/</a>.</p>
+<h3 id="navegador-web">Navegador web<a class="headerlink" href="#navegador-web" title="Permanent link">&para;</a></h3>
+<p>Xubuntu incluye un navegador web llamado <em>Mozilla Firefox</em>. Página web, <a href="https://www.mozilla.org/es-ES/firefox/">https://www.mozilla.org/es-ES/firefox/</a>.</p>
+<h3 id="correo-electronico">Correo electrónico<a class="headerlink" href="#correo-electronico" title="Permanent link">&para;</a></h3>
+<p>Se incluye de serie un programa de correo electrónico llamado <em>Thunderbird</em>. A iniciarlo, basta con introducir nuestro correo y contraseña para aque <em>Thunderbird</em> se encargue de verificar permanentemente si hay correos nuevos.</p>
+<h3 id="visor-de-documentos">Visor de documentos<a class="headerlink" href="#visor-de-documentos" title="Permanent link">&para;</a></h3>
+<p>Para visualizar documentos en formato PDF, PostScript, etc. Xubuntu proporciona un programa llamado <em>Atril</em>.</p>
+<p>También tenemos un programa visualizador de imágenes llamado <em>Ristretto</em>.</p>
+<h3 id="escaner-de-documentos">Escáner de documentos<a class="headerlink" href="#escaner-de-documentos" title="Permanent link">&para;</a></h3>
+<p>Se proporciona un programa para escanear documentos.</p>
+<h3 id="photoshop">Photoshop<a class="headerlink" href="#photoshop" title="Permanent link">&para;</a></h3>
+<p>El equivalente es el célebre programa <em>GIMP</em>. Página web: <a href="https://www.gimp.org/">https://www.gimp.org/</a></p>
+<h3 id="reproductores-de-musica-y-video">Reproductores de música y vídeo<a class="headerlink" href="#reproductores-de-musica-y-video" title="Permanent link">&para;</a></h3>
+<p>En el apartado <em>multimedia</em> encontraremos dos reproductores, <em>Parole</em> y <em>Rhythmbox</em>. <em>Parole</em> es el reproductor proporcionado por el proyecto <em>Xfce</em>, y su página web es <a href="https://docs.xfce.org/apps/parole/start">https://docs.xfce.org/apps/parole/start</a>.</p>
+<p><em>Rhythmbox</em> es el reproductor multimedia de Gnome. Página web: <a href="https://wiki.gnome.org/Apps/Rhythmbox">https://wiki.gnome.org/Apps/Rhythmbox</a></p>
+<h3 id="grabador-de-cds-y-dvds">Grabador de CDs y DVDs<a class="headerlink" href="#grabador-de-cds-y-dvds" title="Permanent link">&para;</a></h3>
+<p>El programa suministrado por Xfce es <em>Xfburn</em></p>
+<h3 id="utilidades-varias">Utilidades varias<a class="headerlink" href="#utilidades-varias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Calculadora</li>
+<li>Sencillo editor de archivos de texto <em>mousepad</em></li>
+<li>Utilidad de notas sobre el escritorio</li>
+</ul>
+<h2 id="software-a-instalar">Software a instalar<a class="headerlink" href="#software-a-instalar" title="Permanent link">&para;</a></h2>
+<p>Veamos algunos programas de interés:</p>
+<ul>
+<li>
+<p>Programas gráficos:</p>
+<ul>
+<li>Pinta: Un programa de dibujo que emula el popular &ldquo;Paint&rdquo; de Microsoft.</li>
+<li>KolourPaint: El programa de dibujo del escritorio KDE. Aunque usemos otro escritorio, como en este caso Xcfe, podemos usar las herramientas de KDE</li>
+<li>MyPaint: Otra alternativa de dibujo.</li>
+<li>Shotwell Photo Manager: El gestor de fotos del escritorio GNOME.</li>
+</ul>
+</li>
+<li>
+<p>Internet:</p>
+<ul>
+<li>Chromium: el navegador web de Google.</li>
+<li>Opera. Un navegador alternativo a Firefox.</li>
+<li>Evolution: un gestor de correo alternativo, que incluye calendario, gestión de tareas, etc</li>
+<li>Deluge: un gestor de descargas bitTorrent.</li>
+<li>Marble: alternativa a google earth.</li>
+<li>FileZilla: cliente FTP</li>
+<li>Pidgin: programa de mensajeria</li>
+<li>Skype</li>
+<li>Dropbox: gestión de almacenamiento en red</li>
+</ul>
+</li>
+<li>
+<p>Oficina:</p>
+<ul>
+<li>Evince, un visualizador de pdf y otros documentos.</li>
+</ul>
+</li>
+<li>
+<p>Sonido y video:</p>
+<ul>
+<li>VLC Media Player - para ver vídeos  </li>
+<li>Amarok - gestor de música</li>
+<li>Sound Juicer CD Extractor - para copiar CDs</li>
+<li>Totem - media player (video/audio)</li>
+<li>K3B - graba CD/DVD</li>
+<li>Brasero - otro grabador de CD/DVD</li>
+<li>Audacity - editor de audio</li>
+<li>Kino - editor de video</li>
+</ul>
+</li>
+</ul>
+<h2 id="informacion-del-sistema">Información del sistema<a class="headerlink" href="#informacion-del-sistema" title="Permanent link">&para;</a></h2>
+<p>¿Que versión de Ubuntu tengo? ¿Que versión del programa de escritorio Xfce le acompaña? La aplicación &ldquo;<em>Acerca de Xfce</em>&rdquo; muestra un informe del sistema:</p>
+<p><img alt="" src="img/908Uso002.png" /></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="07Configurar.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Ajustes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Ajustes
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>

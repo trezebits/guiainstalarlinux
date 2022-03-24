@@ -1,0 +1,664 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Como organizo mi espacio de trabajo Linux">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/guiainstalarlinux/02Escritorios.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Escritorios - Guía para instalar Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#el-escritorio-de-linux" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Guía para instalar Linux" class="md-header__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guía para instalar Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Escritorios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+        Indice
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://trezebits.github.io" class="md-tabs__link">
+      treZe bits
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Guía para instalar Linux" class="md-nav__button md-logo" aria-label="Guía para instalar Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guía para instalar Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/guiainstalarlinux/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trezebits/guiainstalarlinux/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Indice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Indice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Indice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Introduccion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Linux.html" class="md-nav__link">
+        Acerca de Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Escritorios
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="02Escritorios.html" class="md-nav__link md-nav__link--active">
+        Escritorios
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#los-origenes" class="md-nav__link">
+    Los orígenes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escritorios-mas-populares" class="md-nav__link">
+    Escritorios más populares
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-linux" class="md-nav__link">
+    Obtener Linux
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03VMware.html" class="md-nav__link">
+        Máquina virtual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04Instalar.html" class="md-nav__link">
+        Instalar sistema operativo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Carpetas.html" class="md-nav__link">
+        Carpetas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Terminal.html" class="md-nav__link">
+        Terminal de comandos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Configurar.html" class="md-nav__link">
+        Ajustes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Uso.html" class="md-nav__link">
+        El uso de Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        treZe bits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#los-origenes" class="md-nav__link">
+    Los orígenes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escritorios-mas-populares" class="md-nav__link">
+    Escritorios más populares
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-linux" class="md-nav__link">
+    Obtener Linux
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="el-escritorio-de-linux">El escritorio de Linux<a class="headerlink" href="#el-escritorio-de-linux" title="Permanent link">&para;</a></h1>
+<p>Al ser Linux una recopilación de software libre, con frecuencia tendremos varios programas alternativos para la misma tarea. Un claro ejemplo es el programa de escritorio. </p>
+<p>Cada distribución hace su propia selección de programas, incluyendo su escritorio favorito. Los hay más populares que otros, no habiendo un ganador claro. De todas formas, muchas distribuciones nos permiten optar por otros escritorios alternativos.</p>
+<p>Veamos las principales opciones.</p>
+<h2 id="los-origenes">Los orígenes<a class="headerlink" href="#los-origenes" title="Permanent link">&para;</a></h2>
+<p>Hasta la década de 1970, todos los ordenadores funcionaban con terminales de texto:</p>
+<p><img alt="" src="img/901pcTexto.jpg" /></p>
+<p>El concepto de escritorio gráfico fue inventado en 1970 por el fabricante de fotocopiadoras XEROX, quien fundó un centro de investigación llamado <em>XEROX PARC</em>, en Palo Alto, California, con la idea de desarrollar nuevas tecnologías e introducirse en el mercado de los ordenadores. </p>
+<p>Aquellos primeros programas de escritorio se limitaban a imágenes de baja resolución, en blanco y negro, pero era un primer paso. </p>
+<p><img alt="" src="img/902xerox.jpg" /></p>
+<p>En 1979, un acuerdo de Xerox con Apple para intercambiar tecnologías inspiró el lanzamiento del popular Macintosh:</p>
+<p><img alt="" src="img/902mac.jpg" /></p>
+<p>Microsoft copió la idea, y la década de los noventa fue testigo de la generalización de los escritorios gráficos gracias al lanzamiento de Windows 3. </p>
+<p>Pero antes de esto, durante los años ochenta, el MIT ya había desarrollado un sistema gráfico para UNIX, llamado &ldquo;<em>X Window System</em>&rdquo;. No era un escritorio, sino un software que permitía mostrar los programas en ventanas separadas:</p>
+<p><img alt="" src="img/902xwindow.png" /></p>
+<p>Basándose en este estándar, surgieron varios programas de escritorio para Unix. Uno de los más populares fue <a href="http://www.opengroup.org/cde/">CDE</a>, abreviatura de <em>Common Desktop Environment</em>, creado en 1993 por un grupo de empresas formado por Hewlett-Packard, IBM, Novell y Sun Microsystems.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/CDE_Application_Builder.png" /></p>
+<h2 id="escritorios-mas-populares">Escritorios más populares<a class="headerlink" href="#escritorios-mas-populares" title="Permanent link">&para;</a></h2>
+<p>Las primeras versiones de Linux funcionaban solo con un shell de texto. En 1996, el programador alemán Matthias Ettrich se inspiró en el escritorio CDE para crear <a href="https://kde.org">KDE</a>, considerado en la actualidad como uno de los más completos. Incorpora multitud de herramientas complementarias, y tiene un comportamiento bastante similar a Windows.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/9/94/KDE_Plasma_5.21_Breeze_Twilight_screenshot.png" /></p>
+<p>KDE está desarrollado por una amplia comunidad de programadores, pero no está exento de polémica. En sus inicios, algunos de los componentes no eran software libre, cosa que se ha ido solucionando con el paso del tiempo.</p>
+<p>A partir de la versión 5, KDE pasó a llamarse <em>Plasma</em>.</p>
+<p>Para hacer frente al problema de licencias de KDE, los mexicanos Miguel de Icaza y Federico Mena crearon en 1997​ el escritorio <a href="https://www.gnome.org">GNOME</a>, como parte del proyecto GNU. El nombre es un acrónimo de &ldquo;<em>GNU Network Object Model Environment</em>&rdquo;.</p>
+<p>En la actualidad GNOME parece ser el escritorio favorito de la mayoría de distribuciones.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/9/97/GNOME_Shell.png" /></p>
+<p>Durante los primeros años del siglo actual, KDE y Gnome fueron los dos escritorios más populares. Pero el lanzamiento en 2011 de la versión 3 de GNOME produjo un gran aluvión de críticas por su usabilidad. Tenía como propósito proporcionar una experiencia parecida al comportamiento de las tablets, alejándose del concepto clásico de escritorio al que los usuarios estaban acostumbrados. Esto hizo que muchas personas prefirieran seguir usando GNOME 2, y que por otra parte surgiera un proyecto paralelo denominado <a href="https://mate-desktop.org">MATE</a>, derivado de GNOME 2 y orientado a proporcionar un escritorio con aspecto más tradicional.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/MATE_1.10.png" /></p>
+<p>MATE es ideal para usuarios que quieran un escritorio clásico con poco consumo de recursos, y sin tantos efectos especiales como pueden proporcionar las versiones actuales de GNOME.</p>
+<p>Cuando GNOME 3 hizo su aparición, los responsables de Linux Mint descartaron incorporarlo a su distribución, y optaron por seguir con GNOME 2. Dado que este ya no iba a seguir evolucionando, inicialmente incorporaron MATE, pero ante lo confuso de la situación, decidieron abordar un proyecto propio denominado <a href="https://es.wikipedia.org/wiki/Cinnamon">Cinnamon</a>. En la actualidad, <em>Mint</em> se distribuye con ambas alternativas, MATE y Cinnamon, siendo esta última la versión oficial.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Cinnamon_4.4.8_on_Linux_Mint_19.3.png" /></p>
+<p>Otra de las consecuencias de la polémica surgida en torno a GNOME 3 fue el anuncio por parte de Ubuntu de lanzar su propio escritorio denominado <a href="https://es.wikipedia.org/wiki/Unity_(entorno_de_escritorio)">Unity</a>.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Dash_pequeno_en_Ubuntu_12.04.png" /></p>
+<p>Unity también se aleja del concepto clásico de escritorio, estando concebido para todo tipo de dispositivos, ordenadores, tablets, TV, etcétera. Pero tampoco ha estado exento de polémica. Desde su lanzamiento, se vió que los requerimientos de hardware eran elevados, y que su rendimiento en ordenadores de gama baja era limitado, resultando muy lento en su funcionamiento. Con el tiempo se han ido resolviendo estos problemas, pero Unity no ha llegado a convertirse en una alternativa al resto de escritorios. En 2017, los responsables de Ubuntu anunciaron su apuesta por las versiones recientes de GNOME, dejando relegado a Unity.</p>
+<p>Como alternativa a la guerra de escritorios y sus prestaciones gráficas, si buscamos un escritorio sencillo, vistoso y que consuma pocos recursos, probablemente la versión más popular sea <a href="https://es.wikipedia.org/wiki/Xfce">Xfce</a>, presente en muchas distribuciones como alternativa a otros escritorios más potentes. Xfce es una buena opción si tenemos un ordenador antiguo o si estamos trabajando con una máquina virtual y tenemos problemas de rendimiento.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/XFCE-4.10-Desktop.png" /></p>
+<p>Otra alternativa de escritorio ligero es <a href="https://es.wikipedia.org/wiki/LXDE">lxde</a></p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/LXDE_desktop_full.png" /></p>
+<h2 id="obtener-linux">Obtener Linux<a class="headerlink" href="#obtener-linux" title="Permanent link">&para;</a></h2>
+<p>Para instalar Linux en nuestro equipo necesitamos un DVD de instalación. El primer paso es escoger una distribución, y seguidamente acudir a su página web para descargar dicho DVD.</p>
+<p>Se diría que hay dos grandes distribuciones de referencia, <em>RedHat</em> en el mundo de la empresa, y <em>Ubuntu</em>, más orientada al mercado doméstico, aunque presente en otros ámbitos. <em>Ubuntu</em> es un derivado de <em>Debian</em>, que es menos popular por excluir todo tipo de software con licencia, aunque sea la favorita de muchos defensores del software libre.</p>
+<p>Si optamos por <em>RedHat</em> para darle un uso personal, lo más lógico es descargar e instalar <a href="https://getfedora.org/es/">Fedora</a>. Por defecto viene con el escritorio Gnome, pero en <a href="https://spins.fedoraproject.org">esta otra página</a> tenemos más alternativas.</p>
+<p>Si optamos por <a href="https://ubuntu.com">Ubuntu</a>, el escritorio por defecto también es <em>Gnome</em>. Si queremos otras opciones, necesitaremos una distribución derivada de Ubuntu:</p>
+<ul>
+<li>para <em>KDE</em>, <a href="https://kubuntu.org">Kubuntu</a> </li>
+<li>para <em>Xfce</em>, <a href="https://xubuntu.org">Xubuntu</a></li>
+<li>para <em>Cinnamon</em>, <a href="https://linuxmint.com">Mint</a></li>
+</ul>
+<p>KDE es un escritorio muy vistoso, que aporta muchas funcionalidades, pero personalmente prefiero la sencillez de Xfce. <em>Mint</em> con escritorio <em>Cinnamon</em> es una solución intermedia, muy amigable, estable y fácil de instalar y utilizar. Pero al ser una <em>distro</em> basada en Ubuntu, su repositorio de software suele ir un paso atrás, y no siempre encontraremos las versiones más actuales de cada programa. La alternativa es acudir a la página web del programa en cuestión y descargar desde allí la última versión, prescindiendo del repositorio oficial de la distribución.</p>
+<p>En este cuaderno usaré <em>Xubuntu</em>. Pero antes de instalarlo, necesitamos una máquina virtual. En el siguiente capítulo veremos como crearla.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href="01Linux.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Acerca de Linux" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Acerca de Linux
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="03VMware.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Máquina virtual" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Máquina virtual
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>
